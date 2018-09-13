@@ -1,0 +1,35 @@
+// ==========================================================================
+//   function or mixin
+// ==========================================================================
+// == pixel to rem ==
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+// == Mixin for placeholder ==
+@mixin placeholderColor($color) {
+    &:placeholder-shown {
+        color: $color;
+    }
+    &::-webkit-input-placeholder {
+        color:$color;
+    }
+    &:-moz-placeholder {
+        color:$color;
+        opacity: 1;
+    }
+    &::-moz-placeholder {
+        color:$color;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        color:$color;
+    }
+}

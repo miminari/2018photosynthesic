@@ -1,0 +1,15 @@
+html {
+    color: #333;
+}
+.svgsprite_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.svgsprite_list li {
+    list-style: none;
+    width: 10vw;
+    text-align: center;
+}
+.svgsprite_list li svg {
+    width: 80%;
+}

@@ -1,0 +1,186 @@
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+/* ======= MOBILE ONLY ======= */
+@media only screen and (max-width: 40em) {
+
+//------ media query end
+}
+
+ /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+/* ======= TABLET ONLY ======= */
+@media only screen and (min-width: 40.063em) and (max-width: 63.99em) {
+
+//------ media query end
+}
+
+/* ======= TABLET, DESKTOP ======= */
+@media only screen and (min-width: 40.063em) {
+/* --------------------
+   Module rule ( .m- )
+   -------------------- */
+.m-box--cols {
+    /*
+    display: flex;
+    flex-wrap: wrap;
+    .m-widget {
+        flex: 0 0 50%;
+        box-sizing: border-box;
+        padding-right: rem(20);
+    }
+    */
+}
+
+
+//------ media query end
+}
+/* ======= DESKTOP ======= */
+@media only screen and (min-width: 64em) {
+/* --------------------
+   Module rule ( .m- )
+   -------------------- */
+.m-box--fit {
+    display: flex;
+    flex-wrap: wrap;
+    .m-card {
+        display: flex;
+        max-height: rem(500);
+        overflow: hidden;
+        position: relative;
+        .m-media {
+            flex: 0 0 61.8%;
+            > a {
+                height: 100%;
+            }
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .m-musthead {
+            position: absolute;
+            bottom: 0;
+            background-color: $base-color;
+            padding: rem(20) 0 rem(10) 0;
+        }
+        &:first-child {
+            flex: 1 1 100%;
+        }
+        &__body {
+            flex: 1 1 30%;
+            padding: 0 rem(20);
+            margin-bottom: rem(20);
+        }
+        &:nth-child(2) {
+            flex: 0 0 61.8%;
+            border-bottom: 0;
+            border-right: rem(1) solid $border-color;
+        }
+        &:nth-child(3) {
+            flex: 1 1 30%;
+            display: block;
+            .m-media {
+                img {
+                    //max-height: rem(180);
+                }
+            }
+            .m-txt {
+                display: none;
+            }
+        }
+    }
+}
+.m-article__header + .m-media {
+    width: auto;
+    max-width: 60vw;
+    margin: 0;
+    overflow: hidden;
+    img {
+        max-height: 40vh;
+        object-fit: cover;
+    }
+}
+/* --------------------
+   Layout rule ( .l- )
+   -------------------- */
+.l-contanier {
+    display: flex;
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 0 3vw;
+    .l-main,.l-aside {
+        box-sizing: border-box;
+        padding: 0;
+    }
+    .l-main {
+        flex: 1 1 60vw;
+        max-width: 60vw;
+        padding-right: 1.8vw;
+    }
+    .l-aside {
+        flex: 1 1 30vw;
+    }
+}
+
+/* --------------------
+   Animation
+   -------------------- */
+
+/* hamberger menu */
+.l-global__nav {
+    width: rem(400);
+    right: rem(-400);
+}
+
+
+//------ media query end
+}
+/* XLarge screens */
+ /* min-width 1441px, xlarge screens */
+@media only screen and (min-width: 90.063em) {
+/* --------------------
+   Layout rule ( .l- )
+   -------------------- */
+.l-wrapper {
+
+}
+.l-contanier {
+    //max-width: rem(1441);
+    //margin: 0 auto;
+    .l-aside {
+        //max-width: rem(400);
+    }
+}
+
+/* --------------------
+   Page
+   -------------------- */
+.home {
+    .l-contanier--home {
+        display: flex;
+        padding: 0 3vw;
+        .l-main,
+        .l-aside {
+            padding: 0;
+        }
+        .l-main {
+            padding-right: 3vw;
+        }
+        .l-aside {
+            .m-box {
+                max-height: rem(1);
+                visibility: hidden;
+            }
+        }
+    }
+}
+//------ media query end
+}
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
