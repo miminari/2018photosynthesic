@@ -35,21 +35,20 @@ $base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe U
 @import "base";
 
 /* ==========================================================================
-   myTemplate's custom styles
+   photosynthesic's custom styles
    ========================================================================== */
-
-
 /* --------------------
    State rule ( .is- )
    -------------------- */
 .is-hide {
     display: none;
 }
-
-
 /* --------------------
    Module rule ( .m- )
    -------------------- */
+@import "modules/btn"; // --- button module
+@import "modules/article"; // --- article module
+
 /* == ttl == */
 .m-ttl {
     font-size: rem(20);
@@ -129,93 +128,7 @@ $base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe U
         }
     }
 }
-/* == article == */
-.m-article {
-    border-top: rem(1) solid $text-color;
-    margin-bottom: rem(30);
-    &__header {
-        padding: 0 0 rem(20) 0;
-        .m-musthead {
-            padding: rem(10) 0 rem(15) 0;
-            font-size: rem(12);
-        }
-        h1 {
-            margin: 0;
-        }
-        + .m-media {
-            width: 100vw;
-            margin: 0 -3vw;
-        }
-    }
 
-    &__body {
-        font-size: rem(16);
-        line-height: 1.8;
-        margin-bottom: rem(30);
-        h2,h3,h4,h5,h6 {
-            //color: lighten($text-color,30%);
-            margin: 1.3em 0 .8em 0;
-            + p {
-                margin-top: 0;
-            }
-        }
-        h1 {
-            font-size: rem(16);
-            color: lighten($text-color,50%);
-            font-weight: 400;
-            margin: 0;
-        }
-        h2 {
-            font-size: rem(20);
-            //border-bottom: solid rem(1) lighten($text-color,70%);
-        }
-        h3 {
-            font-size: rem(18);
-        }
-        h4 {
-            font-size: rem(16);
-        }
-        h5,h6 {
-            font-size: rem(16);
-        }
-        code {
-            padding: 1em;
-            background-color: darken($base-color, 5%);
-            display: inline-block;
-            font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-            display: block;
-            font-size: smaller;
-        }
-        hr {
-            border-top: rem(3) solid lighten($text-color,90%);
-            margin: rem(30) 0;
-        }
-        blockquote {
-            margin: 1.5em 0;
-            padding: .5em;
-            position: relative;
-            &:before,
-            &:after {
-                content: '\0022';
-                font-family: serif;
-                font-size: rem(30);
-                position: absolute;
-                color: lighten($text-color,80%);
-            }
-            &:before {
-                top: 0;
-                left: 0;
-            }
-            &:after {
-                bottom: 0;
-                right: 0;
-            }
-        }
-        img {
-            max-width: 100vw;
-        }
-    }
-}
 /* == pagenation == */
 .m-pagination {
     text-align: center;
@@ -269,33 +182,7 @@ $base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe U
         }
     }
 }
-/* == btn == */
-.m-btn {
-    display: inline-block;
-    margin: rem(20) 0;
-    &__link {
-        border: solid rem(1) $border-color;
-        border-radius: rem(5);
-        padding: .5em 1em;
-        text-decoration: none;
-        color: $text-color;
-        &:hover {
-            background-color: darken($base-color, 10%);
-        }
-    }
-    &--primary {
-        @extend .m-btn;
-    }
-    &--primary &__link {
-        background-color: $primary-color;
-        color: $base-color;
-        padding: 1em;
-        border-color: $primary-color;
-        &:hover {
-            background-color: lighten($primary-color,10%);
-        }
-    }
-}
+
 /* == box == */
 .m-box {
     border: solid rem(2) $border-color;
