@@ -46,183 +46,29 @@ $base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe U
 /* --------------------
    Module rule ( .m- )
    -------------------- */
-@import "modules/btn"; // --- button module
 @import "modules/article"; // --- article module
+@import "modules/box"; // --- box module
+@import "modules/btn"; // --- button module
+@import "modules/card"; // --- card module
+@import "modules/icon"; // --- icon module
+@import "modules/menu"; // --- menu module
+@import "modules/search"; // --- search module
+@import "modules/svg"; // --- svg module
+@import "modules/pagination"; // --- pagination module
+@import "modules/widget"; // --- widget module
+
 
 /* == ttl == */
 .m-ttl {
     font-size: rem(20);
 }
-/* == menu == */
-.m-menu {
-    padding: 0;
-    margin: 0;
-    border-top: rem(1) solid $border-color;
-    &__item,
-    > li {
-        list-style: none;
-        a {
-            box-shadow: none;
-            padding: 1em;
-            border-bottom: rem(1) solid $border-color;
-            display: block;
-            transition: padding-left .2s;
-            &:hover {
-                padding-left: 2em;
-            }
-        }
-    }
-}
+
 /* == copyright == */
 .m-copyright {
     font-size: rem(12);
     padding: .5em 1em;
 }
-/* == icon == */
-.m-icon {
-    &--close {
-        width: rem(30);
-        height: rem(30);
-        z-index: 100;
-        span {
-            position: relative;
-            display: block;
-            background-color: $primary-color;
-            width: 100%;
-            height: rem(3);
-            border-radius: rem(3);
-            &:first-child {
-                transform: translateY(rem(7)) rotate(-45deg);
-            }
-            &:last-child {
-                margin-top: rem(10);
-                transform: translateY(rem(-7)) rotate(45deg);
-            }
-        }
-    }
-}
-/* == svg == */
-.m-svg {
-    a {
-        box-shadow: none;
-    }
-    svg {
-        width: rem(30);
-        height: rem(30);
-        fill: lighten($text-color,50%);
-    }
-    &--search {
-        @extend .m-svg;
-        svg {
-            width: rem(20);
-            height: rem(20);
-            fill: rgba($text-color, 0.5);
-            stroke: $base-color;
-        }
-    }
-    &--tags {
-        @extend .m-svg;
-        svg {
-            width: 1rem;
-            height: 1rem;
-        }
-    }
-}
 
-/* == pagenation == */
-.m-pagination {
-    text-align: center;
-    margin-bottom: rem(40);
-    .screen-reader-text {
-        display: none;
-    }
-    a {
-        box-shadow: none;
-    }
-    .page-numbers {
-        text-decoration: none;
-        border: rem(1) solid $border-color;
-        padding: .4em .7em;
-        margin: .1em;
-        transition: all .2s;
-        &:hover {
-            font-size: rem(18);
-        }
-        &.current, &.dots {
-            border: 0;
-        }
-        &.current {
-            font-weight: 700;
-        }
-        &.next {
-            padding-right: 0;
-            &:after {
-                content: '';
-                display: inline-block;
-                background-image: svg-load('svg/dist/icons/angle-right.svg', fill=rgba($text-color,0.2));
-                background-size: contain;
-                background-repeat: no-repeat;
-                height: 1.4em;
-                width: 1.4em;
-                vertical-align: bottom;
-                margin-left: .5em;
-            }
-        }
-        &.prev {
-            &:before {
-                content: '';
-                display: inline-block;
-                background-image: svg-load('svg/dist/icons/angle-left.svg', fill=rgba($text-color,0.2));
-                background-size: contain;
-                background-repeat: no-repeat;
-                height: 1.4em;
-                width: 1.4em;
-                vertical-align: bottom;
-            }
-        }
-    }
-}
-
-/* == box == */
-.m-box {
-    border: solid rem(2) $border-color;
-    padding: rem(10) rem(20);
-    & + & {
-        margin-top: rem(20);
-    }
-    &--fit {
-        @extend .m-box;
-        padding: 0;
-    }
-    &--cols {
-        @extend .m-box;
-    }
-}
-/* == widget == */
-.m-widget {
-    padding-bottom: rem(20);
-    ul {
-        margin: 0;
-        padding: 0;
-        li {
-            list-style: none;
-            list-style-position: inside;
-            text-indent: -1.5em;
-            padding-left: 1.5em;
-            margin-bottom: .7em;
-            &:before {
-                content: '';
-                display: inline-block;
-                background-image: svg-load('svg/dist/icons/logo-min.svg', fill=$text-color);
-                background-size: contain;
-                background-repeat: no-repeat;
-                height: 1.4em;
-                width: 1.4em;
-                vertical-align: bottom;
-            }
-        }
-    }
-}
 /* == media == */
 .m-media {
     img {
@@ -230,26 +76,7 @@ $base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe U
         height: auto;
     }
 }
-/* == card == */
-.m-card {
-    border-bottom: rem(1) solid $border-color;
-    &:last-child {
-        border-bottom: 0;
-    }
-    a {
-        color: $text-color;
-        text-decoration: none;
-    }
-    &__body {
-        padding: 0 3vw;
-        display: block;
-        margin-bottom: 3vw;
-    }
-    .m-date {
-        font-size: rem(12);
-        margin-right: 2em;
-    }
-}
+
 /* == tag == */
 .m-tag {
     display: inline-block;
@@ -306,29 +133,6 @@ $base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe U
         height: 1.7em;
         width: 1.7em;
         vertical-align: bottom;
-    }
-}
-/* == search == */
-.m-search {
-    position: absolute;
-    top: rem(10);
-    margin-left: rem(50);
-    &__field {
-        border: rem(1) solid $border-color;
-        border-radius: rem(3);
-        padding: .5em 2em .5em .5em;
-        width: 80%;
-        box-sizing: border-box;
-        &:focus {
-            outline: none;
-            border-color: $link-color;
-        }
-    }
-    &__submit {
-        border: rem(1) solid $border-color;
-        background-color: $base-color;
-        width: 15vw;
-        box-sizing: border-box;
     }
 }
 

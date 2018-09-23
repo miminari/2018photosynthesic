@@ -1,0 +1,25 @@
+/* == widget == */
+.m-widget {
+    padding-bottom: rem(20);
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            list-style-position: inside;
+            text-indent: -1.5em;
+            padding-left: 1.5em;
+            margin-bottom: .7em;
+            &:before {
+                content: '';
+                display: inline-block;
+                background-image: svg-load('svg/dist/icons/logo-min.svg', fill=$text-color);
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 1.4em;
+                width: 1.4em;
+                vertical-align: bottom;
+            }
+        }
+    }
+}

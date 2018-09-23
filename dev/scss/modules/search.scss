@@ -1,0 +1,23 @@
+/* == search == */
+.m-search {
+    position: absolute;
+    top: rem(10);
+    margin-left: rem(50);
+    &__field {
+        border: rem(1) solid $border-color;
+        border-radius: rem(3);
+        padding: .5em 2em .5em .5em;
+        width: 80%;
+        box-sizing: border-box;
+        &:focus {
+            outline: none;
+            border-color: $link-color;
+        }
+    }
+    &__submit {
+        border: rem(1) solid $border-color;
+        background-color: $base-color;
+        width: 15vw;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,23 @@
+/* == icon == */
+.m-icon {
+    &--close {
+        width: rem(30);
+        height: rem(30);
+        z-index: 100;
+        span {
+            position: relative;
+            display: block;
+            background-color: $primary-color;
+            width: 100%;
+            height: rem(3);
+            border-radius: rem(3);
+            &:first-child {
+                transform: translateY(rem(7)) rotate(-45deg);
+            }
+            &:last-child {
+                margin-top: rem(10);
+                transform: translateY(rem(-7)) rotate(45deg);
+            }
+        }
+    }
+}

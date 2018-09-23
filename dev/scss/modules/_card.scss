@@ -1,0 +1,20 @@
+/* == card == */
+.m-card {
+    border-bottom: rem(1) solid $border-color;
+    &:last-child {
+        border-bottom: 0;
+    }
+    a {
+        color: $text-color;
+        text-decoration: none;
+    }
+    &__body {
+        padding: 0 3vw;
+        display: block;
+        margin-bottom: 3vw;
+    }
+    .m-date {
+        font-size: rem(12);
+        margin-right: 2em;
+    }
+}

@@ -1,0 +1,28 @@
+
+/* == svg == */
+.m-svg {
+    a {
+        box-shadow: none;
+    }
+    svg {
+        width: rem(30);
+        height: rem(30);
+        fill: lighten($text-color,50%);
+    }
+    &--search {
+        @extend .m-svg;
+        svg {
+            width: rem(20);
+            height: rem(20);
+            fill: rgba($text-color, 0.5);
+            stroke: $base-color;
+        }
+    }
+    &--tags {
+        @extend .m-svg;
+        svg {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+}

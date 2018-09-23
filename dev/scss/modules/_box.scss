@@ -1,0 +1,15 @@
+/* == box == */
+.m-box {
+    border: solid rem(2) $border-color;
+    padding: rem(10) rem(20);
+    & + & {
+        margin-top: rem(20);
+    }
+    &--fit {
+        @extend .m-box;
+        padding: 0;
+    }
+    &--cols {
+        @extend .m-box;
+    }
+}
