@@ -86,14 +86,14 @@ function myTemplate_scripts() {
     //デバック時と本番で切り替えるもの
     if(SCRIPT_DEBUG) {
         //css
-        wp_enqueue_style( 'myTemplate-style', get_stylesheet_uri(), false, filemtime( get_stylesheet_directory() . '/style.css') );
+        wp_enqueue_style( 'photosynthesic-style', get_stylesheet_uri(), false, filemtime( get_stylesheet_directory() . '/style.css') );
         //js
-        wp_enqueue_script( 'myTemplate-script', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true);
+        wp_enqueue_script( 'photosynthesic-script', get_template_directory_uri() . '/js/main.js', array(),false, true);
     } else {
         //css
-        wp_enqueue_style('myTemplate-style', get_stylesheet_directory_uri() . '/style.min.css' );
+        wp_enqueue_style('photosynthesic-style', get_stylesheet_directory_uri() . '/style.min.css',false, filemtime( get_stylesheet_directory() . '/style.min.css') );
         //js
-        wp_enqueue_script( 'myTemplate-script', get_template_directory_uri() . '/js/main.min.js', array(), '1.0.0', true);
+        wp_enqueue_script( 'photosynthesic-script', get_template_directory_uri() . '/js/main.min.js', array(), false, true);
     }
 }
 add_action( 'wp_enqueue_scripts', 'myTemplate_scripts' );

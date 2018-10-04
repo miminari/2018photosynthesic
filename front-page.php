@@ -11,7 +11,7 @@
                 </a>
             </div>
             <div class="m-card__body">
-        		<a href="<?php the_permalink(); ?>">
+        		<a v-bind:href="post.link">
         			<h3 class="m-ttl">{{post.title.rendered}}</h3>
         			<div class="m-txt" v-html="post.excerpt.rendered"></div>
         		</a>

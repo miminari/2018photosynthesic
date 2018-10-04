@@ -1297,6 +1297,12 @@ input.m-btn--hamb__input:checked ~ .l-wrapper .l-global__nav .l-icon--search {
     .m-box--fit .m-card:nth-child(3) .m-txt {
         display: none;
     }
+    .m-box--fit .m-card:nth-child(3) .m-tag__container {
+        display: none;
+    }
+    .m-box--fit .m-card:nth-child(3) .m-musthead {
+        background: none;
+    }
     .m-article__header + .m-media {
         width: auto;
         max-width: 60vw;
