@@ -752,11 +752,11 @@ textarea {
 }
 
 /* == svg == */
-.m-svg a, .m-svg--search a, .m-svg--tags a {
+.m-svg a, .m-svg--search a, .m-svg--tags a, .m-svg--twitter a {
     box-shadow: none;
 }
 
-.m-svg svg, .m-svg--search svg, .m-svg--tags svg {
+.m-svg svg, .m-svg--search svg, .m-svg--tags svg, .m-svg--twitter svg {
     width: 1.875rem;
     height: 1.875rem;
     fill: gray;
@@ -772,6 +772,12 @@ textarea {
 .m-svg--tags svg {
     width: 1rem;
     height: 1rem;
+}
+
+.m-svg--twitter svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #00aced;
 }
 
 /* == pagenation == */

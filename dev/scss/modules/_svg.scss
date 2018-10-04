@@ -25,4 +25,12 @@
             height: 1rem;
         }
     }
+    &--twitter {
+        @extend .m-svg;
+        svg {
+            width: rem(40);
+            height: rem(40);
+            fill: #00aced;
+        }
+    }
 }
