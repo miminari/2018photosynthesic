@@ -14,12 +14,10 @@ var vm = new Vue({ // eslint-disable-line
     created () {
         axios.get('/wp-json/wp/v2/posts?_embed&per_page=3')// eslint-disable-line
             .then(response => {
-                // console.log('status:', 'JSON取得完了');
                 this.isLoading = false;
                 this.isLoaded = true;
                 this.posts = response.data;
                 // posts を展開
-                // console.log(this.posts);
             }).catch(error => {
                 console.error('error:', error);
             });

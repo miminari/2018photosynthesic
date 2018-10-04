@@ -52,7 +52,7 @@
             background-color: darken($base-color, 5%);
             display: inline-block;
             font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-            display: block;
+            //display: block;
             font-size: smaller;
         }
         hr {
@@ -81,7 +81,7 @@
             }
         }
         img {
-            max-width: 100vw;
+            //max-width: 100vw;
         }
     }
 }
