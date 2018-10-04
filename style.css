@@ -526,6 +526,10 @@ textarea {
     margin: 0;
 }
 
+.m-article__header h1.m-ttl {
+    font-size: 1.5rem;
+}
+
 .m-article__header + .m-media {
     width: 100vw;
     margin: 0 -3vw;
@@ -1275,6 +1279,7 @@ input.m-btn--hamb__input:checked ~ .l-wrapper .l-global__nav .l-icon--search {
         max-width: 60vw;
         margin: 0;
         overflow: hidden;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     }
     .m-article__header + .m-media img {
         max-height: 40vh;

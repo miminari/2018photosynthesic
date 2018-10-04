@@ -10,6 +10,9 @@
         }
         h1 {
             margin: 0;
+            &.m-ttl {
+                font-size: rem(24);
+            }
         }
         + .m-media {
             width: 100vw;
