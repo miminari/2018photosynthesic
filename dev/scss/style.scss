@@ -172,8 +172,9 @@ $base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe U
     //width: 100vw;
     min-height: 100vh;
     position: relative;
+    //overflow: hidden;
     &__wrapper {
-        height: 100vh;
+        //height: 100vh;
         overflow: auto;
     }
     .l-icon--search {
@@ -194,7 +195,7 @@ $base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe U
     padding: 0 3vw;
 }
 .l-archives {
-    padding: 1em 1em 25vh 1em;
+    padding: 1em;
 }
 .l-bottom__nav {
     padding: 0 3vw;

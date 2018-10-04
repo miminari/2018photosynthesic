@@ -2,11 +2,10 @@
 <div class="l-contanier--home">
 <main class="l-main" id="app">
     <div class="m-box--fit" v-bind:class="{ 'is-loading' : isLoading, 'is-loaded' : isLoaded }">
-        <article class="m-card" id="post-" v-for="post in posts">
+        <article class="m-card" v-bind:id="'post-' + post.id" v-for="post in posts">
         	<div class="m-media">
-
-                <a v-bind:href="post.link" class="a-color__container">
-        		    <span class="a-color"></span>
+                <a v-bind:href="post.link" class="a-color__container" v-bind:class="'a-color__container--' + post.id">
+        		    <span class="a-color" v-bind:class="'a-color--' + post.id"></span>
                     <span v-if="post._embedded['wp:featuredmedia']">
         		    <img :src="post._embedded['wp:featuredmedia'][0].source_url" alt=""></span>
                 </a>
@@ -28,7 +27,7 @@
         </article>
     </div>
         <!-- 一覧ページへのリンク -->
-        <div class="m-btn"><a href="#" class="m-btn__link">記事一覧</a></div>
+        <!-- div class="m-btn"><a href="#" class="m-btn__link">記事一覧</a></div -->
 </main>
 <aside class="l-aside">
 
