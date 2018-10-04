@@ -77,6 +77,9 @@ $base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe U
         width: 100%;
         height: auto;
     }
+    a {
+        box-shadow: none;
+    }
 }
 
 /* == tag == */
@@ -234,10 +237,12 @@ input.m-btn--hamb__input {
     -webkit-touch-callout: none;
     &:checked ~ .l-wrapper {
         position: fixed;
-        top: 0;
+        //top: 0;
     }
     &:checked ~ .l-wrapper .l-global__nav {
         right: 0;
+        max-height: 100vh;
+        overflow: scroll;
         .l-icon--search {
             margin-left: rem(15);
         }
@@ -305,13 +310,13 @@ input.m-btn--hamb__input {
     opacity: 0;
     width: 1px;
     bottom: 0;
-    background-color: $primary-color;
+    background-color: rgba(0,0,0,0.2);
     &__container {
         position: relative;
         display: block;
         min-height: rem(20);
         //max-height: 61.8%;
-        background-color: $text-color;
+        background-color: rgba(0,0,0,0.2);
         img {
             //opacity: 0;
             transition: opacity 1s ease .5s;
