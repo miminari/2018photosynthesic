@@ -666,6 +666,10 @@ textarea {
     text-decoration: none;
 }
 
+.m-card a img:hover {
+    filter: brightness(120%);
+}
+
 .m-card__body {
     padding: 0 3vw;
     display: block;
@@ -1277,7 +1281,7 @@ input.m-btn--hamb__input:checked ~ .l-wrapper .l-global__nav .l-icon--search {
     .m-article__header + .m-media {
         width: auto;
         max-width: 60vw;
-        margin: 0;
+        margin: 0 0 2em 0;
         overflow: hidden;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     }
