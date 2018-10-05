@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('m-article'); ?>>
 	<header class="m-article__header">
 		<div class="m-musthead">
-			<div class="m-date"><?php the_modified_date('Y-m-d'); ?></div>
+			<div class="m-date"><?php the_date('Y-m-d'); ?></div>
 		</div>
 		<?php
 			if ( is_single() || is_page() ) {
