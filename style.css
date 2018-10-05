@@ -1057,8 +1057,8 @@ textarea {
 
 input.m-btn--hamb__input {
     display: block;
-    width: 15vw;
-    height: 15vw;
+    width: 3.75rem;
+    height: 3.75rem;
     max-height: 2.5rem;
     position: fixed;
     top: 0;
