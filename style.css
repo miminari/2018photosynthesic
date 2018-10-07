@@ -1345,9 +1345,14 @@ input.m-btn--hamb__input:checked ~ .l-wrapper .l-global__nav .l-icon--search {
     .home .l-contanier--home .l-main {
         padding-right: 3vw;
     }
-    .home .l-contanier--home .l-aside .m-box, .home .l-contanier--home .l-aside .m-box--fit, .home .l-contanier--home .l-aside .m-box--cols {
-        max-height: 0.0625rem;
-        visibility: hidden;
+    .home .l-contanier--home .l-aside .m-box .m-widget:first-child, .home .l-contanier--home .l-aside .m-box--fit .m-widget:first-child, .home .l-contanier--home .l-aside .m-box--cols .m-widget:first-child {
+        display: none;
+    }
+    .home .l-contanier--home .l-aside .m-box .m-widget:nth-child(2) .wpp-list li, .home .l-contanier--home .l-aside .m-box--fit .m-widget:nth-child(2) .wpp-list li, .home .l-contanier--home .l-aside .m-box--cols .m-widget:nth-child(2) .wpp-list li {
+        display: none;
+    }
+    .home .l-contanier--home .l-aside .m-box .m-widget:nth-child(2) .wpp-list li:nth-child(1), .home .l-contanier--home .l-aside .m-box--fit .m-widget:nth-child(2) .wpp-list li:nth-child(1), .home .l-contanier--home .l-aside .m-box--cols .m-widget:nth-child(2) .wpp-list li:nth-child(1), .home .l-contanier--home .l-aside .m-box .m-widget:nth-child(2) .wpp-list li:nth-child(2), .home .l-contanier--home .l-aside .m-box--fit .m-widget:nth-child(2) .wpp-list li:nth-child(2), .home .l-contanier--home .l-aside .m-box--cols .m-widget:nth-child(2) .wpp-list li:nth-child(2), .home .l-contanier--home .l-aside .m-box .m-widget:nth-child(2) .wpp-list li:nth-child(3), .home .l-contanier--home .l-aside .m-box--fit .m-widget:nth-child(2) .wpp-list li:nth-child(3), .home .l-contanier--home .l-aside .m-box--cols .m-widget:nth-child(2) .wpp-list li:nth-child(3) {
+        display: list-item;
     }
 }
 
