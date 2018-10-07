@@ -609,6 +609,11 @@ textarea {
     right: 0;
 }
 
+.m-article__body img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* == box == */
 .m-box, .m-box--fit, .m-box--cols {
     border: solid 0.125rem #707070;
