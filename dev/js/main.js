@@ -1,10 +1,15 @@
 /* main.js for photosynthesic
     varsion 0.2
 */
-var color = '#eee';
+// var color = '#eee';
 
 var vm = new Vue({ // eslint-disable-line
     el: '#app',
+    filters: {
+        moment: function (date) {
+            return moment(date).format('YYYY/MM/DD HH:mm');// eslint-disable-line
+        }
+    },
     data: {
         isLoaded: false,
         isLoading: true,
@@ -17,6 +22,7 @@ var vm = new Vue({ // eslint-disable-line
                 this.isLoading = false;
                 this.isLoaded = true;
                 this.posts = response.data;
+                /*
                 response.data.forEach(post => {
                     if (post._embedded['wp:featuredmedia']) { // キャッチ画像が設定されているなら
                         var imgUrl = post._embedded['wp:featuredmedia'][0].source_url;
@@ -34,6 +40,7 @@ var vm = new Vue({ // eslint-disable-line
                     }
                 });
                 console.log(this.keyColors);// eslint-disable-line
+                */
             }).catch(error => {
                 console.error('error:', error);
             });

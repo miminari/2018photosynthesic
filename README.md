@@ -16,7 +16,7 @@ npm run watch
 npm run release
 でリリース用のファイル（圧縮版）を出力
 
-## コーディングガイドライン
+## ざっくりコーディングガイドライン
 
 * 基本的にIDにスタイルを振らない。（ボタンにアニメーションなど動きを付ける場合はOK）
 * functions.phpで修正出来る範囲内で、wordpressのクラス名にスタイルを振らない。降る場合は親に.prefix-blockが少なくとも一つ指定していること。
@@ -34,10 +34,10 @@ ex. l-global__header
 
 * クラス名はwordressのクラス名と区別するために、BEM表記（prefix-block__element--modifier）でクラス名を作る。
 
-####継承について
-.m-box
-.m-box--large
-というボックスのモジュールを作った場合、.md-box--largeは.m-boxを@extendさせて継承させる。
+#### 継承について
+`.m-box`
+`.m-box--large`
+というボックスのモジュールを作った場合、`.md-box--large`は`.m-box`を`@extend`で継承する。
 
 ### prefix-
 

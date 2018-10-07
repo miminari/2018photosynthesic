@@ -16,7 +16,7 @@
         			<div class="m-txt" v-html="post.excerpt.rendered"></div>
         		</a>
         		<div class="m-musthead">
-        			<span class="m-date">{{post.date}}</span>
+        			<span class="m-date">{{post.date| moment}}</span>
         			<span class="m-tag__container">
                         <span v-if="post.terms['タグ']">
                             <span class="m-tag" v-for="(tag) in post.terms['タグ']">{{tag.name}}</span>
