@@ -109,6 +109,11 @@
     margin: 0 0 2em 0;
     overflow: hidden;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    h1 {
+        &.m-ttl {
+            font-size: rem(32);
+        }
+    }
     img {
         max-height: 40vh;
         object-fit: cover;
@@ -145,7 +150,11 @@
     width: rem(400);
     right: rem(-400);
 }
-
+input.m-btn--hamb__input {
+    &:checked ~ .l-wrapper {
+        position: relative;
+    }
+}
 
 //------ media query end
 }

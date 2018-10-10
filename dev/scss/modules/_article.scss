@@ -11,7 +11,7 @@
         h1 {
             margin: 0;
             &.m-ttl {
-                font-size: rem(32);
+                font-size: rem(24);
             }
         }
         + .m-media {
@@ -24,6 +24,7 @@
         font-size: rem(16);
         line-height: 1.8;
         margin-bottom: rem(30);
+        word-break: break-all;
         h2,h3,h4,h5,h6 {
             //color: lighten($text-color,30%);
             margin: 1.3em 0 .8em 0;

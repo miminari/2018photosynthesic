@@ -241,7 +241,6 @@ input.m-btn--hamb__input {
     -webkit-touch-callout: none;
     &:checked ~ .l-wrapper {
         position: fixed;
-        //top: 0;
     }
     &:checked ~ .l-wrapper .l-global__nav {
         right: 0;
@@ -303,6 +302,20 @@ input.m-btn--hamb__input {
     &.is-loaded {
         opacity: 1;
         height: auto;
+        margin-top: 0;
+    }
+}
+.l-contanier--home .l-aside {
+    animation: laside 2.5s ease-in-out 0s;
+}
+
+@keyframes laside {
+    0%,93% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+    100% {
+        opacity: 1;
         margin-top: 0;
     }
 }
