@@ -7,6 +7,7 @@ Author: mimi
 Author URI: http://blog.photosynthesic.jp/
 */
 /* ========== 通常フォント設定 ========== */
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:700|Noto+Serif+JP:700");
 @font-face {
     font-family: "Yu Gothic";
     src: local("Yu Gothic Medium");
@@ -527,7 +528,7 @@ textarea {
 }
 
 .m-article__header h1.m-ttl {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .m-article__header + .m-media {
@@ -573,7 +574,7 @@ textarea {
 }
 
 .m-article__body code {
-    padding: 1em;
+    padding: .3em 1em;
     background-color: #f2f2f2;
     display: inline-block;
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
@@ -886,6 +887,7 @@ textarea {
 /* == ttl == */
 .m-ttl {
     font-size: 1.25rem;
+    font-family: "EB Garamond", "Noto Serif JP", serif;
 }
 
 /* == copyright == */
@@ -1353,6 +1355,15 @@ input.m-btn--hamb__input:checked ~ .l-wrapper .l-global__nav .l-icon--search {
     }
     .home .l-contanier--home .l-aside .m-box .m-widget:nth-child(2) .wpp-list li:nth-child(1), .home .l-contanier--home .l-aside .m-box--fit .m-widget:nth-child(2) .wpp-list li:nth-child(1), .home .l-contanier--home .l-aside .m-box--cols .m-widget:nth-child(2) .wpp-list li:nth-child(1), .home .l-contanier--home .l-aside .m-box .m-widget:nth-child(2) .wpp-list li:nth-child(2), .home .l-contanier--home .l-aside .m-box--fit .m-widget:nth-child(2) .wpp-list li:nth-child(2), .home .l-contanier--home .l-aside .m-box--cols .m-widget:nth-child(2) .wpp-list li:nth-child(2), .home .l-contanier--home .l-aside .m-box .m-widget:nth-child(2) .wpp-list li:nth-child(3), .home .l-contanier--home .l-aside .m-box--fit .m-widget:nth-child(2) .wpp-list li:nth-child(3), .home .l-contanier--home .l-aside .m-box--cols .m-widget:nth-child(2) .wpp-list li:nth-child(3) {
         display: list-item;
+    }
+    .archive .l-global__header,
+    .archive .l-contanier,
+    .archive .l-global__footer,
+    .single .l-global__header,
+    .single .l-contanier,
+    .single .l-global__footer {
+        max-width: 90rem;
+        margin: auto;
     }
 }
 

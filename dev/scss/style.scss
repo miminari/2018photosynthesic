@@ -30,7 +30,10 @@ $baseFontSize : 16;
   src: local("Yu Gothic Bold");
   font-weight: bold;
 }
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:700|Noto+Serif+JP:700');
+
 $base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Yu Gothic", YuGothic, sans-serif;
+$serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;
 
 @import "function";
 @import "html5boilerplate/normalize";
@@ -63,6 +66,7 @@ $base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe U
 /* == ttl == */
 .m-ttl {
     font-size: rem(20);
+    font-family: $serif-font-family;
 }
 
 /* == copyright == */
