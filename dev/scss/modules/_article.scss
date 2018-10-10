@@ -21,7 +21,7 @@
     }
 
     &__body {
-        font-size: rem(16);
+        font-size: rem(18);
         line-height: 1.8;
         margin-bottom: rem(30);
         word-break: break-all;
@@ -39,14 +39,17 @@
             margin: 0;
         }
         h2 {
-            font-size: rem(20);
+            font-size: rem(21);
+            margin-top: 3em;
             //border-bottom: solid rem(1) lighten($text-color,70%);
         }
         h3 {
             font-size: rem(18);
+            margin-top: 2em;
         }
         h4 {
-            font-size: rem(16);
+            font-size: rem(18);
+            font-weight: normal;
         }
         h5,h6 {
             font-size: rem(16);

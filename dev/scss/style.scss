@@ -306,11 +306,11 @@ input.m-btn--hamb__input {
     }
 }
 .l-contanier--home .l-aside {
-    animation: laside 2.5s ease-in-out 0s;
+    animation: laside 1.8s ease-in-out 0s;
 }
 
 @keyframes laside {
-    0%,93% {
+    0%,90% {
         opacity: 0;
         margin-top: -20px;
     }
