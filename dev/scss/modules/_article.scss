@@ -2,6 +2,9 @@
 .m-article {
     border-top: rem(1) solid $text-color;
     margin-bottom: rem(30);
+    a {
+        word-break: break-all;
+    }
     &__header {
         padding: 0 0 rem(20) 0;
         .m-musthead {
@@ -22,9 +25,8 @@
 
     &__body {
         font-size: rem(18);
-        line-height: 1.8;
+        line-height: 1.7;
         margin-bottom: rem(30);
-        word-break: break-all;
         h2,h3,h4,h5,h6 {
             //color: lighten($text-color,30%);
             margin: 1.3em 0 .8em 0;
@@ -90,6 +92,9 @@
         img {
             max-width: 100%;
             height: auto;
+        }
+        .syntaxhighlighter {
+            font-size: rem(14) !important;
         }
     }
 }
