@@ -75,6 +75,13 @@ $serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;
     padding: .5em 1em;
 }
 
+/* == link == */
+.m-link {
+    &--url {
+        font-size: rem(12) !important;
+    }
+}
+
 /* == media == */
 .m-media {
     img {

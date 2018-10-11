@@ -907,6 +907,11 @@ textarea {
     padding: .5em 1em;
 }
 
+/* == link == */
+.m-link--url {
+    font-size: 0.75rem !important;
+}
+
 /* == media == */
 .m-media img {
     width: 100%;
@@ -1396,7 +1401,10 @@ input.m-btn--hamb__input:checked ~ .l-wrapper .l-global__nav .l-icon--search {
     .single .l-global__footer,
     .page .l-global__header,
     .page .l-contanier,
-    .page .l-global__footer {
+    .page .l-global__footer,
+    .error404 .l-global__header,
+    .error404 .l-contanier,
+    .error404 .l-global__footer {
         max-width: 90rem;
         margin: auto;
     }
