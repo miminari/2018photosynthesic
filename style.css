@@ -626,6 +626,37 @@ textarea {
     font-size: 0.875rem !important;
 }
 
+/* == author == */
+.m-author {
+    border-top: 0.0625rem solid #707070;
+    margin: 3.75rem 0;
+    display: grid;
+    grid-template-areas: "ttl ttl" "icon name" "icon desc";
+}
+
+.m-author .m-ttl {
+    grid-area: ttl;
+}
+
+.m-author__icon {
+    grid-area: icon;
+    border-radius: 50%;
+    border: 1px solid #707070;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    margin-right: 3vw;
+}
+
+.m-author__name {
+    grid-area: name;
+    margin: 0 0 .5em;
+}
+
+.m-author__description {
+    grid-area: desc;
+}
+
 /* == box == */
 .m-box, .m-box--fit {
     border: solid 0.125rem #707070;
@@ -825,10 +856,6 @@ textarea {
     padding: .4em .7em;
     margin: .1em;
     transition: all .2s;
-}
-
-.m-pagination .page-numbers:hover {
-    font-size: 1.125rem;
 }
 
 .m-pagination .page-numbers.current, .m-pagination .page-numbers.dots {
@@ -1402,6 +1429,9 @@ input.m-btn--hamb__input:checked ~ .l-wrapper .l-global__nav .l-icon--search {
     .page .l-global__header,
     .page .l-contanier,
     .page .l-global__footer,
+    .search .l-global__header,
+    .search .l-contanier,
+    .search .l-global__footer,
     .error404 .l-global__header,
     .error404 .l-contanier,
     .error404 .l-global__footer {

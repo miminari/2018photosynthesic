@@ -52,6 +52,7 @@ $serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;
    Module rule ( .m- )
    -------------------- */
 @import "modules/article"; // --- article module
+@import "modules/author"; // --- author module
 @import "modules/box"; // --- box module
 @import "modules/btn"; // --- button module
 @import "modules/card"; // --- card module

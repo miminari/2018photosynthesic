@@ -1,0 +1,29 @@
+/* == author == */
+.m-author {
+    border-top: rem(1) solid $border-color;
+    margin: rem(60) 0;
+    display: grid;
+    grid-template-areas:
+    "ttl ttl"
+    "icon name"
+    "icon desc";
+    .m-ttl {
+        grid-area: ttl;
+    }
+    &__icon {
+        grid-area: icon;
+        border-radius: 50%;
+        border: 1px solid $border-color;
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        margin-right: 3vw;
+    }
+    &__name {
+        grid-area: name;
+        margin: 0 0 .5em;
+    }
+    &__description {
+        grid-area: desc;
+    }
+}
