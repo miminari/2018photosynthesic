@@ -6,7 +6,7 @@ module.exports = {
 //    "extends": "eslint:recommended",
     "extends": ['eslint:recommended', 'vue', 'plugin:vue/recommended'],
     "parserOptions": {
-        "ecmaVersion": 5
+        "ecmaVersion": 2017
     },
     "rules": {
         "indent": [

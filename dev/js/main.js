@@ -14,8 +14,8 @@ const vm = new Vue({ // eslint-disable-line
     data: {
         isLoaded: false,
         isLoading: true,
-        posts: []
-        // keyColors: []
+        posts: [],
+        keyColors: []
     },
     created () {
         axios.get('/wp-json/wp/v2/posts?_embed&per_page=3')// eslint-disable-line
@@ -23,7 +23,7 @@ const vm = new Vue({ // eslint-disable-line
                 this.isLoading = false;
                 this.isLoaded = true;
                 this.posts = response.data;
-                getColor(response.data);
+                getColor(response.data);// 色を取得
             }).catch(error => {
                 console.error('error:', error);
             });
@@ -38,40 +38,51 @@ const getColor = (posts) => {
             console.log('でーたあり');// eslint-disable-line
             } else { // 初回だけドミナントカラー取得
             console.log('でーたなし');// eslint-disable-line
-            console.log(posts);// eslint-disable-line
                 posts.forEach(post => {
                     if (post._embedded['wp:featuredmedia']) { // キャッチ画像が設定されているなら
                         var imgUrl = post._embedded['wp:featuredmedia'][0].source_url;
-                        var dominant = getDominant(imgUrl,dominant)
-                            .then(dominant => {
-                                thisColorinfo = {
-                                    'id': post.id,
-                                    'modified': post.modified,
-                                    'dominant': dominant
-                                };
-                                console.log(thisColorinfo);// eslint-disable-line
-                            }).catch(error => {
-                                console.log('error:', error);// eslint-disable-line
-                            });
+                        RGBaster.colors(imgUrl, { // eslint-disable-line
+                            paletteSize: 3,
+                            success: function (colors) {
+                                vm.keyColors.push(colors.dominant);
+                            }
+                        });
+                        // var dominant = getDominant(imgUrl)
+                        //     .then(response => {
+                        //         var thisColorinfo = {
+                        //             'id': post.id,
+                        //             'modified': post.modified,
+                        //             'dominant': dominant
+                        //         };
+                        //         console.log(thisColorinfo);// eslint-disable-line
+                        //     });
                     } else {
                         console.log('画像なし');// eslint-disable-line
                     }
                 });
             }
         }).catch(error => { // JSON読み込みエラー
-        console.log('error:', error);// eslint-disable-line
-        console.log(colors);// eslint-disable-line
+            console.error('error:', error);
         });
 };
-
-// ドミナントカラー取得
-const getDominant = (imgUrl,dominant) => {
-    const colors = RGBaster.colors(imgUrl, { // eslint-disable-line
-        paletteSize: 3,
-        exclude: ['rgb(255,255,255)', 'rgb(0,0,0)'],
-        success: function (colors) {
-            console.log(colors);// eslint-disable-line
-            dominant = { 'dominant': colors.dominant };
-        }
-    });
-};
+// async function getDominant(imgUrl) {
+//     RGBaster.colors(imgUrl, {
+//         paletteSize: 3,
+//         exclude: ['rgb(255,255,255)', 'rgb(0,0,0)'],
+//         success: function (colors) {
+//             console.log(colors);// eslint-disable-line
+//             const dominant = await colors.dominant;
+//         }
+//     });
+// }
+// カラー取得
+// const getDominant = async (imgURL) => {
+//     const dominant = RGBaster.colors(imgURL, { // eslint-disable-line
+//         paletteSize: 3,
+//         success: await function (colors) {
+//             console.log(colors);// eslint-disable-line
+//             Promise.resolve({ 'dominant': colors.dominant });
+//         }
+//     });
+//     return dominant;
+// };
