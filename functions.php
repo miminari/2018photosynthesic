@@ -84,7 +84,7 @@ function myTemplate_scripts() {
     wp_enqueue_script( 'axios', 'https://unpkg.com/axios/dist/axios.min.js', array(), '', true);
     wp_enqueue_script( 'moment', 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/ja.js', array(), '', true);
     //wp_enqueue_script( 'rgbaster', get_template_directory_uri() . '/js/vender/rgbaster.js', array(), '1.1.0', true);
-    //wp_enqueue_script( 'rgbaster', get_template_directory_uri() . '/js/vender/rgbaster.min.js', array(), '1.0.0', false);
+    wp_enqueue_script( 'rgbaster', get_template_directory_uri() . '/js/vender/rgbaster.min.js', array(), '1.0.0', false);
     //デバック時と本番で切り替えるもの
     if(SCRIPT_DEBUG) {
         //css

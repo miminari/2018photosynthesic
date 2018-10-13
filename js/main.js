@@ -2,9 +2,10 @@
 /* main.js for photosynthesic
     varsion 0.2
 */
-var color = '#eee';
+// var color = '#eee';
+// var colors = [];
 
-var vm = new Vue({ // eslint-disable-line
+const vm = new Vue({ // eslint-disable-line
     el: '#app',
     filters: {
         moment: function (date) {
@@ -14,8 +15,8 @@ var vm = new Vue({ // eslint-disable-line
     data: {
         isLoaded: false,
         isLoading: true,
-        posts: [],
-        keyColors: []
+        posts: []
+        // keyColors: []
     },
     created () {
         axios.get('/wp-json/wp/v2/posts?_embed&per_page=3')// eslint-disable-line
@@ -23,34 +24,55 @@ var vm = new Vue({ // eslint-disable-line
                 this.isLoading = false;
                 this.isLoaded = true;
                 this.posts = response.data;
-                // ドミナントカラーを配列に入れる
-                axios.get('/wordpress/wp-content/themes/2018photosynthesic/js/color.json')// eslint-disable-line
-                    .then(response => { // JSONあり
-                        console.log(response.data);// eslint-disable-line
-                    }).catch(error => { // 初回だけドミナントカラー取得
-                        console.log('error:', error);// eslint-disable-line
-                        this.posts.forEach(post => {
-                            if (post._embedded['wp:featuredmedia']) { // キャッチ画像が設定されているなら
-                                var imgUrl = post._embedded['wp:featuredmedia'][0].source_url;
-                                var colors = RGBaster.colors(imgUrl, { // eslint-disable-line
-                                    paletteSize: 3,
-                                    exclude: ['rgb(255,255,255)', 'rgb(0,0,0)'],
-                                    success: function (colors) {
-                                        var dominant = colors.palette[0];
-                                        console.log(dominant);// eslint-disable-line
-                                        // json に保存
-                                    }
-                                });
-                            } else {
-                                this.keyColors.push(color);
-                            }
-                        });
-                    });
+                getColor(response.data);
             }).catch(error => {
                 console.error('error:', error);
             });
     }
 });
 
+// ドミナントカラーを配列に入れる
+const getColor = (posts) => {
+    axios.get('/wordpress/wp-content/themes/2018photosynthesic/js/color.json')// eslint-disable-line
+        .then(response => { // JSONあり
+            if (response.data) {
+            console.log('でーたあり');// eslint-disable-line
+            } else { // 初回だけドミナントカラー取得
+            console.log('でーたなし');// eslint-disable-line
+            console.log(posts);// eslint-disable-line
+                posts.forEach(post => {
+                    if (post._embedded['wp:featuredmedia']) { // キャッチ画像が設定されているなら
+                        var imgUrl = post._embedded['wp:featuredmedia'][0].source_url;
+                        var dominant = getDominant(imgUrl);
+                        var thisColorinfo = {
+                            'id': post.id,
+                            'modified': post.modified,
+                            'dominant': dominant
+                        };
+                        console.log(thisColorinfo);// eslint-disable-line
+                    } else {
+                        console.log('画像なし');// eslint-disable-line
+                    }
+                });
+            }
+        }).catch(error => { // JSON読み込みエラー
+        console.log('error:', error);// eslint-disable-line
+        console.log(colors);// eslint-disable-line
+        });
+};
+
+// ドミナントカラー取得
+const getDominant = (imgUrl) => {
+    const colors = RGBaster.colors(imgUrl, { // eslint-disable-line
+        paletteSize: 3,
+        exclude: ['rgb(255,255,255)', 'rgb(0,0,0)'],
+        success: function (colors) {
+            console.log(colors);// eslint-disable-line
+            const dominant = { 'dominant': colors.dominant };
+            console.log(dominant);// eslint-disable-line
+            return dominant;
+        }
+    });
+};
 
 },{}]},{},[1]);
