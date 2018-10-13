@@ -42,13 +42,17 @@ const getColor = (posts) => {
                 posts.forEach(post => {
                     if (post._embedded['wp:featuredmedia']) { // キャッチ画像が設定されているなら
                         var imgUrl = post._embedded['wp:featuredmedia'][0].source_url;
-                        var dominant = getDominant(imgUrl);
-                        var thisColorinfo = {
-                            'id': post.id,
-                            'modified': post.modified,
-                            'dominant': dominant
-                        };
-                        console.log(thisColorinfo);// eslint-disable-line
+                        var dominant = getDominant(imgUrl,dominant)
+                            .then(dominant => {
+                                thisColorinfo = {
+                                    'id': post.id,
+                                    'modified': post.modified,
+                                    'dominant': dominant
+                                };
+                                console.log(thisColorinfo);// eslint-disable-line
+                            }).catch(error => {
+                                console.log('error:', error);// eslint-disable-line
+                            });
                     } else {
                         console.log('画像なし');// eslint-disable-line
                     }
@@ -61,15 +65,13 @@ const getColor = (posts) => {
 };
 
 // ドミナントカラー取得
-const getDominant = (imgUrl) => {
+const getDominant = (imgUrl,dominant) => {
     const colors = RGBaster.colors(imgUrl, { // eslint-disable-line
         paletteSize: 3,
         exclude: ['rgb(255,255,255)', 'rgb(0,0,0)'],
         success: function (colors) {
             console.log(colors);// eslint-disable-line
-            const dominant = { 'dominant': colors.dominant };
-            console.log(dominant);// eslint-disable-line
-            return dominant;
+            dominant = { 'dominant': colors.dominant };
         }
     });
 };
