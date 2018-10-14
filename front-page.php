@@ -12,7 +12,7 @@
             </div>
             <div class="m-card__body">
         		<a v-bind:href="post.link">
-        			<h3 class="m-ttl">{{post.title.rendered}}</h3>
+        			<h3 class="m-ttl"> {{post.dcolor}} {{post.title.rendered}}</h3>
         			<div class="m-txt" v-html="post.excerpt.rendered"></div>
         		</a>
         		<div class="m-musthead">

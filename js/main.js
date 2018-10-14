@@ -15,8 +15,7 @@ const vm = new Vue({ // eslint-disable-line
     data: {
         isLoaded: false,
         isLoading: true,
-        posts: [],
-        keyColors: []
+        posts: []
     },
     created () {
         axios.get('/wp-json/wp/v2/posts?_embed&per_page=3')// eslint-disable-line
@@ -39,13 +38,18 @@ const getColor = (posts) => {
             console.log('でーたあり');// eslint-disable-line
             } else { // 初回だけドミナントカラー取得
             console.log('でーたなし');// eslint-disable-line
-                posts.forEach(post => {
-                    if (post._embedded['wp:featuredmedia']) { // キャッチ画像が設定されているなら
-                        var imgUrl = post._embedded['wp:featuredmedia'][0].source_url;
+                // posts.forEach(post => {
+                for (const key in posts) {
+                    if (posts[key]._embedded['wp:featuredmedia']) { // キャッチ画像が設定されているなら
+                        console.log('key:'+key+',id:'+posts[key].id);// eslint-disable-line
+                        var imgUrl = posts[key]._embedded['wp:featuredmedia'][0].source_url;
                         RGBaster.colors(imgUrl, { // eslint-disable-line
                             paletteSize: 3,
                             success: function (colors) {
-                                vm.keyColors.push(colors.dominant);
+                                // vm.keyColors.push(colors.dominant);
+                                // vm.keyColors.push({ id: post.id, dominant: colors.dominant });
+                                console.log('dcolor:'+colors.dominant);// eslint-disable-line
+                                vm.posts[key].dcolor = colors.dominant;
                             }
                         });
                         // var dominant = getDominant(imgUrl)
@@ -59,8 +63,10 @@ const getColor = (posts) => {
                         //     });
                     } else {
                         console.log('画像なし');// eslint-disable-line
+                        // vm.keyColors.push({ id: post.id, dominant: '#eee' });
+                        vm.posts[key].dcolor = '#eee';
                     }
-                });
+                }
             }
         }).catch(error => { // JSON読み込みエラー
             console.error('error:', error);
