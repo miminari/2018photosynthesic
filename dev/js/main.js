@@ -41,14 +41,16 @@ const getColor = (posts) => {
                 for (const key in posts) {
                     if (posts[key]._embedded['wp:featuredmedia']) { // キャッチ画像が設定されているなら
                         console.log('key:'+key+',id:'+posts[key].id);// eslint-disable-line
-                        var imgUrl = posts[key]._embedded['wp:featuredmedia'][0].source_url;
+                        var imgUrl = posts[key]._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url;
                         RGBaster.colors(imgUrl, { // eslint-disable-line
                             paletteSize: 3,
                             success: function (colors) {
                                 // vm.keyColors.push(colors.dominant);
                                 // vm.keyColors.push({ id: post.id, dominant: colors.dominant });
-                                console.log('dcolor:'+colors.dominant);// eslint-disable-line
-                                vm.posts[key].dcolor = colors.dominant;
+                                console.log('dcolor:'+colors.secondary);// eslint-disable-line
+                                // vm.posts[key].dcolor = colors.dominant;
+                                Vue.set(vm.posts[key], 'dcolor', colors.secondary);// eslint-disable-line
+                                Vue.set(vm.posts[key], 'isColored', true);// eslint-disable-line
                             }
                         });
                         // var dominant = getDominant(imgUrl)
@@ -63,7 +65,8 @@ const getColor = (posts) => {
                     } else {
                         console.log('画像なし');// eslint-disable-line
                         // vm.keyColors.push({ id: post.id, dominant: '#eee' });
-                        vm.posts[key].dcolor = '#eee';
+                        Vue.set(vm.posts[key], 'dcolor', '#eee');// eslint-disable-line
+                        Vue.set(vm.posts[key], 'isColored', true);// eslint-disable-line
                     }
                 }
             }

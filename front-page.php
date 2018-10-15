@@ -4,15 +4,15 @@
     <div class="m-box--fit" v-bind:class="{ 'is-loading' : isLoading, 'is-loaded' : isLoaded }">
         <article class="m-card" v-bind:id="'post-' + post.id" v-for="post in posts">
         	<div class="m-media">
-                <a v-bind:href="post.link" class="a-color__container" v-bind:class="'a-color__container--' + post.id">
-        		    <span class="a-color" v-bind:class="'a-color--' + post.id"></span>
+                <a v-bind:href="post.link" class="a-color__container" v-bind:class="{'is-colored' : post.isColored }">
+        		    <span class="a-color" v-bind:class="'a-color--' + post.id" v-bind:style="{ background: post.dcolor }"></span>
                     <span v-if="post._embedded['wp:featuredmedia']">
         		    <img :src="post._embedded['wp:featuredmedia'][0].source_url" alt=""></span>
                 </a>
             </div>
             <div class="m-card__body">
         		<a v-bind:href="post.link">
-        			<h3 class="m-ttl"> {{post.dcolor}} {{post.title.rendered}}</h3>
+        			<h3 class="m-ttl">{{post.title.rendered}}</h3>
         			<div class="m-txt" v-html="post.excerpt.rendered"></div>
         		</a>
         		<div class="m-musthead">

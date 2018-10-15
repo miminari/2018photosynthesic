@@ -1227,21 +1227,22 @@ input.m-btn--hamb__input:checked ~ .l-wrapper .l-global__nav .l-icon--search {
 }
 
 .a-color__container img {
+    opacity: 0;
     transition: opacity 1s ease .5s;
 }
 
-.a-color__container.is-loaded .a-color {
+.a-color__container.is-colored .a-color {
     animation-name: colorbar;
     animation-duration: 1.2s;
     animation-iteration-count: 1;
 }
 
-.a-color__container.is-loaded:hover .a-color {
+.a-color__container.is-colored:hover .a-color {
     animation-name: colorbar;
     animation-duration: 0.5s;
 }
 
-.a-color__container.is-loaded img {
+.a-color__container.is-colored img {
     opacity: 1;
 }
 

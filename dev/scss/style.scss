@@ -343,20 +343,20 @@ input.m-btn--hamb__input {
         //max-height: 61.8%;
         background-color: rgba(0,0,0,0.2);
         img {
-            //opacity: 0;
+            opacity: 0;
             transition: opacity 1s ease .5s;
         }
     }
-    &__container.is-loaded & {
+    &__container.is-colored & {
         animation-name: colorbar;
         animation-duration: 1.2s;
         animation-iteration-count: 1;
     }
-    &__container.is-loaded:hover & {
+    &__container.is-colored:hover & {
         animation-name: colorbar;
         animation-duration: 0.5s;
     }
-    &__container.is-loaded img {
+    &__container.is-colored img {
         opacity: 1;
     }
 }
