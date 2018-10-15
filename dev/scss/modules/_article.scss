@@ -88,6 +88,11 @@
                 bottom: 0;
                 right: 0;
             }
+            cite {
+                font-size: rem(12);
+                display: block;
+                margin-top: -1em;
+            }
         }
         img {
             max-width: 100%;

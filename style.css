@@ -617,6 +617,12 @@ textarea {
     right: 0;
 }
 
+.m-article__body blockquote cite {
+    font-size: 0.75rem;
+    display: block;
+    margin-top: -1em;
+}
+
 .m-article__body img {
     max-width: 100%;
     height: auto;
