@@ -32,48 +32,37 @@ const vm = new Vue({ // eslint-disable-line
 
 // ドミナントカラーを配列に入れる
 const getColor = (posts) => {
-    axios.get('/wordpress/wp-content/themes/2018photosynthesic/js/color.json')// eslint-disable-line
-        .then(response => { // JSONあり
-            if (response.data) {
-            console.log('でーたあり');// eslint-disable-line
-            } else { // 初回だけドミナントカラー取得
-            console.log('でーたなし');// eslint-disable-line
-                // posts.forEach(post => {
-                for (const key in posts) {
-                    if (posts[key]._embedded['wp:featuredmedia']) { // キャッチ画像が設定されているなら
-                        console.log('key:'+key+',id:'+posts[key].id);// eslint-disable-line
-                        var imgUrl = posts[key]._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url;
-                        RGBaster.colors(imgUrl, { // eslint-disable-line
-                            paletteSize: 3,
-                            success: function (colors) {
-                                // vm.keyColors.push(colors.dominant);
-                                // vm.keyColors.push({ id: post.id, dominant: colors.dominant });
-                                console.log('dcolor:'+colors.secondary);// eslint-disable-line
-                                // vm.posts[key].dcolor = colors.dominant;
-                                Vue.set(vm.posts[key], 'dcolor', colors.secondary);// eslint-disable-line
-                                Vue.set(vm.posts[key], 'isColored', true);// eslint-disable-line
-                            }
-                        });
-                        // var dominant = getDominant(imgUrl)
-                        //     .then(response => {
-                        //         var thisColorinfo = {
-                        //             'id': post.id,
-                        //             'modified': post.modified,
-                        //             'dominant': dominant
-                        //         };
-                        //         console.log(thisColorinfo);// eslint-disable-line
-                        //     });
-                    } else {
-                        console.log('画像なし');// eslint-disable-line
-                        // vm.keyColors.push({ id: post.id, dominant: '#eee' });
-                        Vue.set(vm.posts[key], 'dcolor', '#eee');// eslint-disable-line
-                        Vue.set(vm.posts[key], 'isColored', true);// eslint-disable-line
-                    }
+    for (const key in posts) {
+        if (posts[key]._embedded['wp:featuredmedia']) { // キャッチ画像が設定されているなら
+            // console.log('key:'+key+',id:'+posts[key].id);// eslint-disable-line
+            var imgUrl = posts[key]._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url;
+            RGBaster.colors(imgUrl, { // eslint-disable-line
+                paletteSize: 3,
+                success: function (colors) {
+                    // vm.keyColors.push(colors.dominant);
+                    // vm.keyColors.push({ id: post.id, dominant: colors.dominant });
+                    // console.log('dcolor:'+colors.secondary);// eslint-disable-line
+                    // vm.posts[key].dcolor = colors.dominant;
+                    Vue.set(vm.posts[key], 'dcolor', colors.secondary);// eslint-disable-line
+                    Vue.set(vm.posts[key], 'isColored', true);// eslint-disable-line
                 }
-            }
-        }).catch(error => { // JSON読み込みエラー
-            console.error('error:', error);
-        });
+            });
+            // var dominant = getDominant(imgUrl)
+            //     .then(response => {
+            //         var thisColorinfo = {
+            //             'id': post.id,
+            //             'modified': post.modified,
+            //             'dominant': dominant
+            //         };
+            //         console.log(thisColorinfo);// eslint-disable-line
+            //     });
+        } else {
+            // console.log('画像なし');
+            // vm.keyColors.push({ id: post.id, dominant: '#eee' });
+            Vue.set(vm.posts[key], 'dcolor', '#eee');// eslint-disable-line
+            Vue.set(vm.posts[key], 'isColored', true);// eslint-disable-line
+        }
+    }
 };
 // async function getDominant(imgUrl) {
 //     RGBaster.colors(imgUrl, {
