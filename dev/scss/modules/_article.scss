@@ -57,11 +57,10 @@
             font-size: rem(16);
         }
         code {
-            padding: .3em 1em;
+            padding: 0 .8em;
             background-color: darken($base-color, 5%);
             display: inline-block;
             font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-            //display: block;
             font-size: smaller;
         }
         hr {

@@ -1,5 +1,5 @@
 /* main.js for photosynthesic
-    varsion 0.2
+    varsion 0.3
 */
 // var color = '#eee';
 // var colors = [];
