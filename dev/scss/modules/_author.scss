@@ -15,7 +15,7 @@
     &__icon {
         grid-area: icon;
         border-radius: 50%;
-        border: 1px solid $border-color;
+        border: rem(3) solid rgba($border-color,0.1);
         width: 120px;
         height: 120px;
         overflow: hidden;

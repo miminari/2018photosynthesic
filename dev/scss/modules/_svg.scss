@@ -30,7 +30,7 @@
         svg {
             width: rem(30);
             height: rem(30);
-            fill: #00aced;
+            fill: $twitter-color;
         }
     }
     &--facebook {
@@ -38,7 +38,7 @@
         svg {
             width: rem(30);
             height: rem(30);
-            fill: #3b5998;
+            fill: $facebook-color;
         }
     }
 }
