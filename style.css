@@ -762,6 +762,43 @@ textarea {
     transform: translateY(-0.4375rem) rotate(45deg);
 }
 
+/* == list == */
+.m-list--sns {
+    display: flex;
+    width: 50%;
+    min-width: 9.375rem;
+    margin: auto;
+}
+
+.m-list--sns li {
+    list-style: none;
+}
+
+.m-list--sns a {
+    box-shadow: none;
+}
+
+.m-list--sns > .m-list__item {
+    list-style: none;
+    flex: 1;
+    text-align: center;
+}
+
+.m-list--sns .m-list__link {
+    border-radius: 60%;
+    display: inline-block;
+    width: 3.75rem;
+    height: 3.75rem;
+    text-align: center;
+    line-height: 3.75rem;
+    border: 0.1875rem solid #333;
+    opacity: 0.4;
+}
+
+.m-list--sns .m-list__link:hover {
+    opacity: 1;
+}
+
 /* == menu == */
 .m-menu {
     padding: 0;
@@ -816,11 +853,11 @@ textarea {
 }
 
 /* == svg == */
-.m-svg a, .m-svg--search a, .m-svg--tags a, .m-svg--twitter a {
+.m-svg a, .m-svg--search a, .m-svg--tags a, .m-svg--twitter a, .m-svg--facebook a {
     box-shadow: none;
 }
 
-.m-svg svg, .m-svg--search svg, .m-svg--tags svg, .m-svg--twitter svg {
+.m-svg svg, .m-svg--search svg, .m-svg--tags svg, .m-svg--twitter svg, .m-svg--facebook svg {
     width: 1.875rem;
     height: 1.875rem;
     fill: gray;
@@ -839,9 +876,15 @@ textarea {
 }
 
 .m-svg--twitter svg {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.875rem;
+    height: 1.875rem;
     fill: #00aced;
+}
+
+.m-svg--facebook svg {
+    width: 1.875rem;
+    height: 1.875rem;
+    fill: #3b5998;
 }
 
 /* == pagenation == */
@@ -998,7 +1041,6 @@ textarea {
     background-repeat: no-repeat;
     height: 1.4em;
     width: 1.4em;
-    vertical-align: bottom;
 }
 
 /* == next == */
@@ -1018,7 +1060,6 @@ textarea {
     background-repeat: no-repeat;
     height: 1.7em;
     width: 1.7em;
-    vertical-align: bottom;
 }
 
 /* --------------------
@@ -1106,7 +1147,7 @@ textarea {
     width: 100vw;
     top: 0;
     right: -100vw;
-    transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
 .l-global__nav .l-icon--search {

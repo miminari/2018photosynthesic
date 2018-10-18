@@ -200,7 +200,9 @@ function my_meta_ogp() {
 
     //facebookのapp_id（設定する場合）
     $insert .= '<meta property="fb:app_id" content="450826578664610">' . "\n";
-    //app_idを設定しない場合ここまで消す
+    
+    // google thumbnail 
+	  $insert .= '<meta name="thumbnail" content="'.esc_url($ogp_img).'" />' . "\n";
 
     echo $insert;
   }

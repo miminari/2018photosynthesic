@@ -57,6 +57,7 @@ $serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;
 @import "modules/btn"; // --- button module
 @import "modules/card"; // --- card module
 @import "modules/icon"; // --- icon module
+@import "modules/list"; // -- list module
 @import "modules/menu"; // --- menu module
 @import "modules/search"; // --- search module
 @import "modules/svg"; // --- svg module
@@ -131,7 +132,7 @@ $serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;
         background-repeat: no-repeat;
         height: 1.4em;
         width: 1.4em;
-        vertical-align: bottom;
+        // vertical-align: bottom;
     }
 }
 /* == next == */
@@ -149,7 +150,7 @@ $serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;
         background-repeat: no-repeat;
         height: 1.7em;
         width: 1.7em;
-        vertical-align: bottom;
+        // vertical-align: bottom;
     }
 }
 
@@ -229,7 +230,7 @@ $serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;
     top: 0;
     right: -100vw;
     transition: right 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            // background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
             opacity 0.55s ease;
     .l-icon--search {
         transition: margin 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
