@@ -35,32 +35,32 @@ function myTemplate_widgets_init() {
 		'id' => 'sidebar01',
 		'before_widget' => '<div class="m-widget">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2 class="m-ttl">',
-		'after_title' => '</h2>',
+		'before_title' => '<h3 class="m-ttl">',
+		'after_title' => '</h3>',
 	) );
 	register_sidebar( array(
 		'name' => 'sidebar02',
 		'id' => 'sidebar02',
 		'before_widget' => '<div class="m-widget">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2 class="m-ttl">',
-		'after_title' => '</h2>',
+		'before_title' => '<h3 class="m-ttl">',
+		'after_title' => '</h3>',
 	) );
 	register_sidebar( array(
 		'name' => 'search sidebar',
 		'id' => 'search_sidebar',
 		'before_widget' => '<div class="m-search">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2 class="m-ttl">',
-		'after_title' => '</h2>',
+		'before_title' => '<h3 class="m-ttl">',
+		'after_title' => '</h3>',
 	) );
 	register_sidebar( array(
 		'name' => 'archives sidebar',
 		'id' => 'archives_sidebar',
 		'before_widget' => '<div class="m-archives">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2 class="m-ttl">',
-		'after_title' => '</h2>',
+		'before_title' => '<h3 class="m-ttl">',
+		'after_title' => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'myTemplate_widgets_init' );

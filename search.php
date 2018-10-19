@@ -16,6 +16,7 @@
 
     </main>
     <aside class="l-aside">
+        <h2 class="is-hide">関連情報</h2>
         <?php get_sidebar(); ?>
     </aside>
 </div>
