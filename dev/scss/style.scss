@@ -155,6 +155,12 @@ $serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;
         // vertical-align: bottom;
     }
 }
+/* == alert == */
+.m-alert {
+    font-size: rem(14);
+    padding: .5em 1em;
+    background-color: rgba($text-color,0.1);
+}
 
 /* --------------------
    Layout rule ( .l- )

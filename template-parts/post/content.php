@@ -16,7 +16,13 @@
 	<?php endif; ?>
 
 	<div class="m-article__body">
-		<?php the_content() ?>
+		<?php if ( is_single() ){
+			$date = get_the_date("Y-m-d H:i:s");
+			if (strtotime($date) < strtotime(date("Y-m-d H:i:s",strtotime("-3 year")))) {
+				echo '<div class="m-alert"><p>この記事は3年以上前のものです。</p></div>';
+			}
+		}
+		the_content() ?>
 	</div>
 
 	<div class="m-tags">

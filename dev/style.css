@@ -1081,6 +1081,13 @@ textarea {
     width: 1.7em;
 }
 
+/* == alert == */
+.m-alert {
+    font-size: 0.875rem;
+    padding: .5em 1em;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 /* --------------------
    Layout rule ( .l- )
    -------------------- */

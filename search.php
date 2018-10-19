@@ -1,11 +1,10 @@
 <?php get_header(); ?>
 <div class="l-contanier">
     <main class="l-main">
-        <h1 class="m-ttl"><?php the_archive_title() ?></h1>
     	<?php
-    	if ( have_posts() ) :
-
-    		while ( have_posts() ) : the_post();
+        if ( have_posts() ) : ?>
+            <h1 class="m-ttl"><?php printf( __( '検索結果: %s'), '<span>' . get_search_query() . '</span>' ); ?></h1>
+    	<?php	while ( have_posts() ) : the_post();
 
     			get_template_part( 'template-parts/post/excerpt', get_post_format() );
 
