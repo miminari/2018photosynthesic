@@ -6,7 +6,7 @@
     "sass": "node-sass --output-style expanded --indent-width 4 scss/style.scss style.css",
     "autoprefix": "npx postcss *.css --use autoprefixer -d ../ --no-map",
     "svginline": "npx postcss *.css --use postcss-inline-svg -d ../ --no-map",
-    "build:css": "npm run sass && npm run svginline && npm run autoprefix",
+    "build:css": "npm run sass && npx postcss *.css --use postcss-inline-svg autoprefixer -d ../ --no-map",
     "minify:css": "node-sass ../style.css ../style.min.css --output-style compressed",
     "watch:css": "nodemon -e scss -x \"npm run build:css\"",
     "release:css": "npm run build:css && npm run minify:css",
