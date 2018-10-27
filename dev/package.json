@@ -1,12 +1,12 @@
 {
   "name": "2018_photosynthesic",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "sass compile, minmum etc.",
   "scripts": {
     "sass": "node-sass --output-style expanded --indent-width 4 scss/style.scss style.css",
     "autoprefix": "npx postcss *.css --use autoprefixer -d ../ --no-map",
     "svginline": "npx postcss *.css --use postcss-inline-svg -d ../ --no-map",
-    "build:css": "npm run sass && npm run autoprefix && npm run svginline",
+    "build:css": "npm run sass && npm run svginline && npm run autoprefix",
     "minify:css": "node-sass ../style.css ../style.min.css --output-style compressed",
     "watch:css": "nodemon -e scss -x \"npm run build:css\"",
     "release:css": "npm run build:css && npm run minify:css",
@@ -28,7 +28,7 @@
     "svgsprite": "npm run rimraf && npm run buildsprite && npm run embedsprite"
   },
   "dependencies": {
-    "autoprefixer": "^9.2.0",
+    "autoprefixer": "^9.3.1",
     "browser-sync": "^2.24.4",
     "browserify": "^16.2.0",
     "cpx": "^1.5.0",

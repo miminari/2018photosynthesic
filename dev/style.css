@@ -637,7 +637,6 @@ textarea {
 .m-author {
     border-top: 0.0625rem solid #707070;
     margin: 3.75rem 0;
-    grid-gap: 1em;
     display: grid;
     grid-template-areas: "ttl ttl" "icon name" "icon desc";
 }
