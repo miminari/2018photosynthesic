@@ -1,0 +1,74 @@
+/* == shape == */
+$triangle-height: rem(17);
+$triangle-width: rem(30);
+.m-shape {
+    &--triangle {
+        width: 0; 
+        height: 0;
+        border-style: solid;
+        border-width: 0 $triangle-width $triangle-height $triangle-width;
+        border-color: transparent transparent $primary-color transparent;
+    }
+    &--line {
+        width: 200%;
+        height: 200%;
+        border-top: rem(3) solid $primary-color;
+    }
+    &--asanoha {
+        position: relative;
+        left: 50%;
+        &__part {
+            position: absolute;
+            &:nth-child(2) {
+                transform: translate(rem(20), rem(21)) rotate(60deg);
+            }
+            &:nth-child(3) {
+                transform: translate(rem(9), rem(47)) rotate(120deg);
+            }
+            &:nth-child(4) {
+                transform: translate(rem(-20), rem(53)) rotate(180deg);
+            }
+            &:nth-child(5) {
+                transform: translate(rem(-40), rem(31)) rotate(240deg);
+            }
+            &:nth-child(6) {
+                transform: translate(rem(-29), rem(5)) rotate(300deg);
+            }
+            .m-shape--triangle {
+                position: absolute;
+                transform-origin: center;
+                &:nth-child(1) {
+                    transform:translate(0, rem(7.5));
+                }
+                &:nth-child(2) {
+                    transform:translate(rem(-10), rem(-10)) rotate(120deg);
+                }
+                &:nth-child(3) {
+                    transform:translate(rem(10), rem(-10)) rotate(240deg);
+                }
+            }
+        }
+    }
+
+    /*
+    &--asanoha &--line {
+        position: absolute;
+        transform-origin: center;
+        &:nth-child(2) {
+            transform:rotate(30deg);
+        }
+        &:nth-child(3) {
+            transform:rotate(60deg);
+        }
+        &:nth-child(4) {
+            transform:rotate(90deg);
+        }
+        &:nth-child(5) {
+            transform:rotate(120deg);
+        }
+        &:nth-child(6) {
+            transform:rotate(150deg);
+        }
+    }
+    */
+}

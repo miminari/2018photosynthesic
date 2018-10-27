@@ -32,9 +32,10 @@ $baseFontSize : 16;
   src: local("Yu Gothic Bold");
   font-weight: bold;
 }
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond:700|Noto+Serif+JP:700');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:700|Noto+Serif+JP:400,700');
 
-$base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Yu Gothic", YuGothic, sans-serif;
+//$base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Yu Gothic", YuGothic, sans-serif;
+$base-font-family: 'Noto Serif JP', Meiryo, sans-serif;
 $serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;
 
 @import "function";
@@ -62,6 +63,7 @@ $serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;
 @import "modules/list"; // -- list module
 @import "modules/menu"; // --- menu module
 @import "modules/search"; // --- search module
+@import "modules/shape"; // --- shape module
 @import "modules/svg"; // --- svg module
 @import "modules/pagination"; // --- pagination module
 @import "modules/widget"; // --- widget module
@@ -221,7 +223,7 @@ $serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;
     padding: 0 3vw;
 }
 .l-archives {
-    padding: 1em;
+    padding: 1em 1em rem(40) 1em;
 }
 .l-bottom__nav {
     padding: 0 3vw;
