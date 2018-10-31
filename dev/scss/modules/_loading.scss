@@ -1,0 +1,24 @@
+/* == loading == */
+.m-loading {
+    width: rem(40);
+    height: rem(40);
+    display: inline-block;
+    &--circle {
+        @extend .m-loading;
+        border: rem(2) solid $border-color;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        animation: rotate 1s 0s linear infinite;
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(.9);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}

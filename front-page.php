@@ -5,6 +5,7 @@
         <article class="m-card" v-bind:id="'post-' + post.id" v-for="(post,index) in posts">
         	<div class="m-media">
                 <a v-bind:href="post.link" class="a-color__container" v-bind:class="{'is-colored' : post.isColored }">
+                    <span class="m-loading--circle"></span>
         		    <span class="a-color" v-bind:class="'a-color--' + post.id" v-bind:style="{ background: post.dcolor }"></span>
                     <span v-if="post._embedded['wp:featuredmedia']">
                     <img :src="post._embedded['wp:featuredmedia'][0].source_url" alt="">

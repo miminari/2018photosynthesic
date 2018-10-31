@@ -817,6 +817,32 @@ textarea {
     fill: #3b5998;
 }
 
+/* == loading == */
+.m-loading, .m-loading--circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+}
+
+.m-loading--circle {
+    border: 0.125rem solid #707070;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: rotate 1s 0s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(0.9);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
 /* == menu == */
 .m-menu {
     padding: 0;
