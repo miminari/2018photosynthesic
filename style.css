@@ -829,17 +829,19 @@ textarea {
 
 /* == loading == */
 .m-loading, .m-loading--circle {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.875rem;
+    height: 1.875rem;
     display: inline-block;
 }
 
 .m-loading--circle {
     border: 0.125rem solid #707070;
     border-bottom-color: transparent;
+    border-left-color: rgba(112, 112, 112, 0.6);
+    border-top-color: rgba(112, 112, 112, 0.8);
     border-radius: 50%;
-    -webkit-animation: rotate 1s 0s linear infinite;
-            animation: rotate 1s 0s linear infinite;
+    -webkit-animation: rotate 0.8s 0s linear infinite;
+            animation: rotate 0.8s 0s linear infinite;
 }
 
 @-webkit-keyframes rotate {
