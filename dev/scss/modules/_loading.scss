@@ -10,7 +10,7 @@
         border-left-color: rgba($border-color, 0.6);
         border-top-color: rgba($border-color, 0.8);
         border-radius: 50%;
-        animation: rotate 0.8s 0s linear infinite;
+        animation: rotate 0.8s .5s linear infinite;
     }
 }
 @keyframes rotate {

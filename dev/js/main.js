@@ -37,6 +37,7 @@ const getColor = (posts) => {
             var imgUrl = posts[key]._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url;
             RGBaster.colors(imgUrl, { // eslint-disable-line
                 paletteSize: 3,
+                exclude: ['rgb(255,255,255)', 'rgb(0,0,0)'],
                 success: function (colors) {
                     // vm.keyColors.push(colors.dominant);
                     // vm.keyColors.push({ id: post.id, dominant: colors.dominant });
