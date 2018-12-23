@@ -50,4 +50,12 @@
             }
         }
     }
+    &__number {
+        padding: .5em .8em;
+        font-weight: 700;
+    }
+    a &__number {
+        border: rem(1) solid $border-color;
+        font-weight: 400;
+    }
 }

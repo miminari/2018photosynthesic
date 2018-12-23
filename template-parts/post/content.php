@@ -24,7 +24,14 @@
 		}
 		the_content() ?>
 	</div>
-
+	<?php //ページ送り
+		wp_link_pages( array(
+		'before'      => '<div class="m-pagination"><h2 class="is-hide">ページ送り</h2>',
+		'after'       => '</div>',
+		'link_before' => '<span class="m-pagination__number">',
+		'link_after'  => '</span>',
+		) );
+	?>
 	<div class="m-tags">
 		<?php
 		echo do_shortcode('[svg]tags[/svg]') ;

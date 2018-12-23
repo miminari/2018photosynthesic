@@ -1124,6 +1124,16 @@ textarea {
     vertical-align: bottom;
 }
 
+.m-pagination__number {
+    padding: .5em .8em;
+    font-weight: 700;
+}
+
+a .m-pagination__number {
+    border: 0.0625rem solid #707070;
+    font-weight: 400;
+}
+
 /* == widget == */
 .m-widget {
     padding-bottom: 1.25rem;
