@@ -68,18 +68,31 @@
             font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
             font-size: smaller;
         }
-        hr {
-            border-top: rem(2) dashed lighten($text-color,90%);
-            margin: rem(30);
+        hr,.wp-block-separator {
+            border-top: rem(2) dashed lighten($text-color,50%);
+            margin: rem(30) auto;
+            width: 50%;
+            &.is-style-wide {
+                width: auto;
+                margin: rem(30) 1em;
+            }
+            &.is-style-dots {
+                border: none;
+                width: auto;
+                &::before {
+                    color: lighten($text-color,50%);
+                }
+            }
         }
         blockquote {
             margin: 1.5em 0;
             padding: .5em;
             position: relative;
+            font-family: $serif-font-family;
             &:before,
             &:after {
                 content: '\0022';
-                font-family: serif;
+                font-family: $serif-font-family;
                 font-size: rem(30);
                 position: absolute;
                 color: lighten($text-color,80%);
@@ -95,7 +108,8 @@
             cite {
                 font-size: rem(12);
                 display: block;
-                margin-top: -1em;
+                font-style: normal;
+                text-align: right;
             }
         }
         img {
@@ -113,6 +127,45 @@
         iframe {
             max-width: 94vw;
             overflow: scroll;
+        }
+    }
+    .wp-block-button {
+        .wp-block-button__link {
+            border-radius: rem(6);
+            font-weight: 700;
+            font-size: inherit;
+            line-height: auto;
+            padding: .7em 1.2em;
+            &:hover {
+                text-decoration: none;
+                box-shadow: none;
+            }
+        }
+        &.is-style-default {
+            .wp-block-button__link {
+                background-color: $link-color;
+                &:hover {
+                    background-color: darken( $link-color, 10% );
+                }
+            }
+        }
+        &.is-style-outline {
+            .wp-block-button__link {
+                border-color: $link-color;
+                &:hover {
+                    border-color: darken( $link-color, 10% );
+                    background-color: darken( $base-color, 5% );
+                }
+            }
+        }
+        &.is-style-squared {
+            .wp-block-button__link {
+                background-color: $link-color;
+                border-radius: 0;
+                &:hover {
+                    background-color: darken( $link-color, 10% );
+                }
+            }
         }
     }
 }
