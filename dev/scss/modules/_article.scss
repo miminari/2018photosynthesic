@@ -97,8 +97,17 @@
             max-width: 100%;
             height: auto;
         }
+        figure {
+            margin: 0;
+            max-width: 100vw;
+            overflow: scroll;
+        }
         .syntaxhighlighter {
             font-size: rem(14) !important;
+        }
+        iframe {
+            max-width: 94vw;
+            overflow: scroll;
         }
     }
 }
