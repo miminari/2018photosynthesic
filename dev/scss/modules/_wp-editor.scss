@@ -1,4 +1,4 @@
-
+/* == button == */
 .wp-block-button {
     .wp-block-button__link {
         border-radius: rem(6);
@@ -38,6 +38,7 @@
         }
     }
 }
+/* == separator / hr == */
 hr,.wp-block-separator {
     border-top: rem(2) dashed lighten($text-color,50%);
     margin: rem(30) auto;
@@ -53,4 +54,36 @@ hr,.wp-block-separator {
             color: lighten($text-color,50%);
         }
     }
+}
+/* == table == */
+table,.wp-block-table {
+    border-top: rem(1) solid $border-color;
+    border-left: rem(1) solid $border-color;
+    td,th {
+        padding: .5em 1em;
+        border-right: rem(1) solid $border-color;
+        border-bottom: rem(1) solid $border-color;
+    }
+}
+/* == columns == */
+$column-margin : 1vw;
+@media only screen and (min-width: 40.063em) {
+    .wp-block-column {
+        margin: 0 0 1em 0;
+        &:not(:last-child),
+        &:nth-child(odd) {
+            margin-right: $column-margin;
+        }
+        &:not(:first-child),
+        &:nth-child(even) {
+            margin-left: $column-margin;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        p {
+            text-align: justify;
+        }
+    }
+    
 }

@@ -241,11 +241,11 @@ $serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;
     width: 100vw;
     top: 0;
     right: -100vw;
-    transition: right 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    transition: right .5s cubic-bezier(0.77,0.2,0.05,1.0),
             // background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
             opacity 0.55s ease;
     .l-icon--search {
-        transition: margin 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        transition: margin .5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
 }
 input.m-btn--hamb__input {
