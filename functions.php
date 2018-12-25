@@ -2,7 +2,7 @@
 /*
 npm-script for wordpress
 Theme Name: 2018 Photosynthesic
-Version: 0.2
+Version: 0.3
 */
 // ================================ remove form header emoji etc.
 function disable_emoji() {
@@ -27,6 +27,32 @@ add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 /* アイキャッチ画像を使う */
 add_theme_support( 'post-thumbnails' );
+
+// ================================ エディターの設定
+add_theme_support('editor-styles');
+add_editor_style( 'editor-style.css' ); 
+add_theme_support('disable-custom-font-sizes'); 
+add_theme_support( 'editor-color-palette', array(
+  array(
+    'name' => __( '黒'),
+    'slug' => 'texts',
+    'color' => '#000',
+  ),array(
+    'name' => __( '白'),
+    'slug' => 'base',
+    'color' => '#fff',
+  ),array(
+      'name' => __( '赤'),
+      'slug' => 'red',
+      'color' => '#CE2121',
+  ),
+  array(
+      'name' => __( '金'),
+      'slug' => 'gold',
+      'color' => '#988768',
+  )
+) );
+
 
 // ================================ widgetsの設定
 function myTemplate_widgets_init() {

@@ -3,7 +3,7 @@
   "version": "0.4.0",
   "description": "sass compile, minmum etc.",
   "scripts": {
-    "sass": "node-sass --output-style expanded --indent-width 4 scss/style.scss style.css",
+    "sass": "node-sass --output-style expanded --indent-width 4 scss/style.scss style.css & node-sass --output-style expanded --indent-width 4 scss/editor-style.scss editor-style.css",
     "autoprefix": "npx postcss *.css --use autoprefixer -d ../ --no-map",
     "svginline": "npx postcss *.css --use postcss-inline-svg -d ../ --no-map",
     "build:css": "npm run sass && npx postcss *.css --use postcss-inline-svg autoprefixer -d ../ --no-map",

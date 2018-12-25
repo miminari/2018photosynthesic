@@ -1,0 +1,30 @@
+// ==========================================================================
+// config
+// ==========================================================================
+
+$base-color: #fff;
+$primary-color: rgb(42, 157, 194);
+$link-color: #333;
+$text-color: #000;
+$border-color: #707070;
+$twitter-color: #00aced;
+$facebook-color: #3b5998;
+$baseFontSize : 16;
+// config end -----
+
+/* ========== 通常フォント設定 ========== */
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:700|Noto+Serif+JP:400,700');
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Yu Gothic", YuGothic, sans-serif;
+//$base-font-family: 'Noto Serif JP', Meiryo, sans-serif;
+$serif-font-family: 'EB Garamond', 'Noto Serif JP', serif;

@@ -1,0 +1,14 @@
+@charset "utf-8";
+/*!
+Theme Name: 2018photosynthesicのテーマ
+Description: 2018photosynthesic wordpress テーマのエディター用スタイル
+Version: 0.4
+Author: mimi
+Author URI: http://blog.photosynthesic.jp/
+*/
+
+@import "config";
+
+body {
+    font-family: $base-font-family;
+}
