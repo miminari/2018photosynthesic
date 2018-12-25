@@ -59,17 +59,32 @@ hr,.wp-block-separator {
 table,.wp-block-table {
     border-top: rem(1) solid $border-color;
     border-left: rem(1) solid $border-color;
+    font-size: rem(14);
+    margin: 1em 0;
     td,th {
         padding: .5em 1em;
         border-right: rem(1) solid $border-color;
         border-bottom: rem(1) solid $border-color;
     }
+    th {
+        font-weight: 700;
+        background-color: darken($base-color,3%);
+    }
+    tr {
+        &:nth-child(odd) > td {
+            background-color: darken($base-color,2%);
+        }
+    }
 }
 /* == columns == */
 $column-margin : 1vw;
+.wp-block-column {
+    flex-grow: 1;
+}
 @media only screen and (min-width: 40.063em) {
     .wp-block-column {
         margin: 0 0 1em 0;
+        flex-grow: 1;
         &:not(:last-child),
         &:nth-child(odd) {
             margin-right: $column-margin;

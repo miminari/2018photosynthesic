@@ -1201,6 +1201,8 @@ hr.is-style-dots::before, .wp-block-separator.is-style-dots::before {
 table, .wp-block-table {
     border-top: 0.0625rem solid #707070;
     border-left: 0.0625rem solid #707070;
+    font-size: 0.875rem;
+    margin: 1em 0;
 }
 
 table td, table th, .wp-block-table td, .wp-block-table th {
@@ -1209,10 +1211,24 @@ table td, table th, .wp-block-table td, .wp-block-table th {
     border-bottom: 0.0625rem solid #707070;
 }
 
+table th, .wp-block-table th {
+    font-weight: 700;
+    background-color: #f7f7f7;
+}
+
+table tr:nth-child(odd) > td, .wp-block-table tr:nth-child(odd) > td {
+    background-color: #fafafa;
+}
+
 /* == columns == */
+.wp-block-column {
+    flex-grow: 1;
+}
+
 @media only screen and (min-width: 40.063em) {
     .wp-block-column {
         margin: 0 0 1em 0;
+        flex-grow: 1;
     }
     .wp-block-column:not(:last-child), .wp-block-column:nth-child(odd) {
         margin-right: 1vw;
