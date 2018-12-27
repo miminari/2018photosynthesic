@@ -11,9 +11,9 @@
 			}
 		?>
 	</header>
-	<?php if (has_post_thumbnail())://画像がある場合　?>
+	<?php /* if (has_post_thumbnail())://画像がある場合　?>
 		<div class="m-media"><?php the_post_thumbnail('large');?></div>
-	<?php endif; ?>
+	<?php endif; */ ?>
 
 	<div class="m-article__body">
 		<?php if ( is_single() ){

@@ -33,7 +33,6 @@
     */
 }
 
-
 //------ media query end
 }
 /* ======= DESKTOP ======= */
@@ -103,28 +102,10 @@
         }
     }
 }
-.m-article__header + .m-media {
-    width: auto;
-    max-width: 60vw;
-    margin: 0 0 2em 0;
-    overflow: hidden;
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    
-    img {
-        max-height: 40vh;
-        object-fit: cover;
-    }
-}
-.m-article__header {
-    h1 {
-        &.m-ttl {
-            font-size: rem(32);
-        }
-    }
-}
 /* --------------------
    Layout rule ( .l- )
    -------------------- */
+/*
 .l-contanier {
     display: flex;
     box-sizing: border-box;
@@ -143,6 +124,7 @@
         flex: 1 1 30vw;
     }
 }
+*/
 
 /* --------------------
    Animation

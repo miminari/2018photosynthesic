@@ -654,6 +654,31 @@ textarea {
     overflow: scroll;
 }
 
+/* ======= TABLET, DESKTOP ======= */
+@media only screen and (min-width: 40.063em) {
+    /*
+.m-article__header + .m-media {
+    width: auto;
+    max-width: 60vw;
+    margin: 0 0 2em 0;
+    overflow: hidden;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    
+    img {
+        max-height: 40vh;
+        object-fit: cover;
+    }
+}
+*/
+    .m-article__header {
+        max-width: 43.75rem;
+        margin: auto;
+    }
+    .m-article__header h1.m-ttl {
+        font-size: 2rem;
+    }
+}
+
 /* == author == */
 /* autoprefixer grid: on */
 .m-author {
@@ -1890,41 +1915,29 @@ input.m-btn--hamb__input:checked ~ .l-wrapper .l-global__nav .l-icon--search {
     .m-box--fit .m-card:nth-child(3) .m-media {
         box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.2);
     }
-    .m-article__header + .m-media {
-        width: auto;
-        max-width: 60vw;
-        margin: 0 0 2em 0;
-        overflow: hidden;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    }
-    .m-article__header + .m-media img {
-        max-height: 40vh;
-        object-fit: cover;
-    }
-    .m-article__header h1.m-ttl {
-        font-size: 2rem;
-    }
     /* --------------------
    Layout rule ( .l- )
    -------------------- */
-    .l-contanier {
-        display: flex;
-        box-sizing: border-box;
-        width: 100vw;
-        padding: 0 3vw;
-    }
-    .l-contanier .l-main, .l-contanier .l-aside {
+    /*
+.l-contanier {
+    display: flex;
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 0 3vw;
+    .l-main,.l-aside {
         box-sizing: border-box;
         padding: 0;
     }
-    .l-contanier .l-main {
+    .l-main {
         flex: 1 1 60vw;
         max-width: 60vw;
         padding-right: 3vw;
     }
-    .l-contanier .l-aside {
+    .l-aside {
         flex: 1 1 30vw;
     }
+}
+*/
     /* --------------------
    Animation
    -------------------- */
