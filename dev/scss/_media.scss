@@ -206,8 +206,10 @@ input.m-btn--hamb__input {
     .l-contanier,
     .l-global__footer {
         // 横幅を1440に
+        /*
         max-width: rem(1440);
         margin: auto;
+        */
     }
 }
 //------ media query end
@@ -224,9 +226,11 @@ input.m-btn--hamb__input {
 /* --------------------
 Layout rule ( .l- )
 -------------------- */
+/*
 .l-contanier {
     .l-main {
         max-width: 60em;
     }
 }
+*/
 }

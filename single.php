@@ -28,7 +28,9 @@
     </main>
     <aside class="l-aside">
         <h2 class="is-hide">関連情報</h2>
+        <div class="m-box">
         <?php get_sidebar(); ?>
+        </div>
     </aside>
 </div>
 

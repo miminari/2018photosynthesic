@@ -1,6 +1,6 @@
 /* == article == */
 .m-article {
-    border-top: rem(1) solid $text-color;
+    // border-top: rem(1) solid $text-color;
     margin-bottom: rem(30);
     a {
         word-break: break-all;
@@ -70,37 +70,44 @@
             font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
             font-size: smaller;
         }
-        hr {
-            border-top: rem(2) dashed lighten($text-color,50%);
-            margin: rem(30) auto;
-            width: 50%;
-        }
         blockquote {
-            margin: 1.5em 0;
-            padding: .5em;
+            margin: 1.5em auto;
+            //padding: .5em;
             position: relative;
             font-family: $serif-font-family;
             &:before,
             &:after {
-                content: '\0022';
-                font-family: $serif-font-family;
-                font-size: rem(30);
+                content: '';
+                display: block;
+                width: 6vw;
+                height: 3vw;
                 position: absolute;
-                color: lighten($text-color,80%);
             }
             &:before {
-                top: 0;
-                left: 0;
+                top: -0.5em;
+                left: -0.5em;
+                border-top:rem(1) solid $border-color;
+                border-left: rem(1) solid $border-color;
             }
             &:after {
-                bottom: 0;
-                right: 0;
+                bottom: -0.5em;
+                right: -0.5em;
+                border-right:rem(1) solid $border-color;
+                border-bottom: rem(1) solid $border-color;
+            }
+            p {
+                padding: 1em;
+                margin: 0;
+                &:not(:first-child) {
+                    padding-top: 0;
+                }
             }
             cite {
                 font-size: rem(12);
                 display: block;
                 font-style: normal;
                 text-align: right;
+                padding: 0 1em 1em;
             }
         }
         img {
@@ -146,6 +153,20 @@
     }
     max-width: rem(700);
     margin: auto;
+}
+.m-article__body {
+    > * {
+        max-width: rem(700);
+        margin: 1em auto;
+    }
+    > h1,h2,h3,h4,h5,h6,table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    > figure {
+        max-width: rem(700);
+        margin: auto;
+    }
 }
 
 }

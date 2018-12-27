@@ -31,6 +31,7 @@ $theme-colors: (
 }
 p.has-background {
     padding: 1.2em 1.5em;
+    box-sizing: border-box;
 }
 
 /* == button == */
@@ -86,12 +87,14 @@ p.has-background {
 }
 /* == separator / hr == */
 hr,.wp-block-separator {
-    border-top: rem(2) dashed lighten($text-color,50%);
+    border-top: rem(1) solid $border-color;
     margin: rem(30) auto;
     width: 50%;
+    max-width: rem(600);
     &.is-style-wide {
-        width: auto;
-        margin: rem(30) 1em;
+        width: 100%;
+        max-width: 100%;
+        margin: rem(30) auto;
     }
     &.is-style-dots {
         border: none;
@@ -101,12 +104,36 @@ hr,.wp-block-separator {
         }
     }
 }
+/* == blockquote == */
+.wp-block-quote {
+    &.is-large,
+    &.is-style-large {
+        margin: 1.5em auto;
+        padding: 0;
+        max-width: rem(1024);
+        p {
+            font-style: normal;
+        }
+    }
+}
+/* == pullquote == */
+.wp-block-pullquote,
+figure.wp-block-pullquote {
+    max-width: 100%;
+    p {
+        font-size: rem(24);
+    }
+    cite {
+        font-size: rem(18);
+        text-align: center;
+    }
+}
 /* == table == */
 table.wp-block-table {
     border-top: rem(1) solid $border-color;
     border-left: rem(1) solid $border-color;
     font-size: rem(14);
-    margin: 1em 0;
+    margin: 1em auto;
     td,th {
         padding: .5em 1em;
         border-right: rem(1) solid $border-color;
@@ -124,11 +151,33 @@ table.wp-block-table {
 }
 /* == columns == */
 $column-margin : 0;
-$column-padding : .5em;
+$column-padding : 1em;
 .wp-block-column {
     flex-grow: 1;
 }
+.wp-block-columns {
+    &.has-3-columns,
+    &.has-4-columns {
+        display: block;
+    }
+    &.has-2-columns {
+        .wp-block-column {
+            &:first-child {
+                padding-right: $column-padding;
+            }
+            &:last-child {
+                padding-left: $column-padding;
+            }
+        }
+    }
+}
 @media only screen and (min-width: 40.063em) {
+    .wp-block-columns {
+        &.has-3-columns,
+        &.has-4-columns {
+            display: flex;
+        }
+    }
     .wp-block-column {
         margin: 0 0 1em 0;
         flex-grow: 1;
@@ -145,6 +194,7 @@ $column-padding : .5em;
         }
         &:last-child {
             margin-right: 0;
+            padding-right: 0;
         }
         p {
             text-align: justify;
@@ -154,4 +204,33 @@ $column-padding : .5em;
         }
     }
     
+}
+/* == wp-block-subhead == */
+p.wp-block-subhead {
+    font-style: normal;
+}
+/* == wp-block-audio == */
+figure.wp-block-audio {
+    margin: 1em auto;
+    max-width: rem(700);
+}
+/* == image == */
+.wp-block-image {
+    .aligncenter,
+    .alignleft,
+    .alignright,
+    &.is-resized {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        > figcaption {
+            display: block;
+        }
+    }
+    .alignleft {
+        margin-right: 1em;
+    }
+    .alignright {
+        margin-left: 1em;
+    }
 }

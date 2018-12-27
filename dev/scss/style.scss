@@ -75,9 +75,12 @@ Author URI: http://blog.photosynthesic.jp/
 /* == tag == */
 .m-tag {
     display: inline-block;
-    padding: .2em .5em;
+    padding: .2em .5em .2em 0;
     margin-right: .5em;
     font-size: rem(12);
+}
+.m-tags {
+    margin-bottom: 1em;
 }
 /* == nav == */
 .m-nav {
@@ -359,6 +362,16 @@ input.m-btn--hamb__input {
         height: 0;
     }
 }
+/* --------------------
+   Page rule
+   -------------------- */
+body:not(.home) {
+    .l-global__header .m-svg--logo svg {
+        width: 200px;
+        height: 80px;
+    }
+}
+
 @import "media";
 
 /* end custom styles

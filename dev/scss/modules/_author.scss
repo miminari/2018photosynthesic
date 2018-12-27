@@ -1,13 +1,15 @@
 /* == author == */
 /* autoprefixer grid: on */
 .m-author {
-    border-top: rem(1) solid $border-color;
-    margin: rem(60) 0;
+    border-top: rem(2) solid $border-color;
+    margin: rem(60) auto;
+    max-width: rem(700);
     display: grid;
     grid-template-areas:
     "ttl ttl"
     "icon name"
     "icon desc";
+    padding-top: 1em;
     .m-ttl {
         grid-area: ttl;
     }

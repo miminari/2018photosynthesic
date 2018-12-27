@@ -3,7 +3,7 @@
 </footer>
 
 </div><!-- end .l-warpper -->
-<div class="l-backscreen">
+<!-- div class="l-backscreen">
     <div class="m-shape--asanoha">
         <span class="m-shape--asanoha__part">
             <span class="m-shape--triangle"></span>
@@ -36,7 +36,7 @@
             <span class="m-shape--triangle"></span>
         </span>
     </div>
-</div>
+</div -->
 <?php wp_footer();
 get_template_part( 'template-parts/global/svgsprite', get_post_format() ); ?>
 </body>
