@@ -3,7 +3,8 @@
 .m-author {
     border-top: rem(2) solid $border-color;
     margin: rem(60) auto;
-    max-width: rem(700);
+    max-width: rem($content-width-wide);
+    clear: both;
     display: grid;
     grid-template-areas:
     "ttl ttl"

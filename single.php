@@ -27,10 +27,16 @@
         </nav>
     </main>
     <aside class="l-aside">
+        <?php if ( is_active_sidebar( 'sidebar02' ) ) : ?>
+            <?php dynamic_sidebar( 'sidebar02' ); ?>
+        <?php endif;?>
+
         <h2 class="is-hide">関連情報</h2>
-        <div class="m-box">
-        <?php get_sidebar(); ?>
-        </div>
+        <?php if ( is_active_sidebar( 'sidebar01' ) ) : ?>
+            <div class="m-box">
+                <?php dynamic_sidebar( 'sidebar01' ); ?>
+            </div>
+        <?php endif;?>
     </aside>
 </div>
 

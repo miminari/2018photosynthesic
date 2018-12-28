@@ -10,3 +10,14 @@
         padding: 0;
     }
 }
+
+/* ======= TABLET, DESKTOP ======= */
+@media only screen and (min-width: 40.063em) {
+    .m-box {
+        display: flex;
+        flex-wrap: wrap;
+        .m-widget {
+            flex: 1 1 50%;
+        }
+    }
+}

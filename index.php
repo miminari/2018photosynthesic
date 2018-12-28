@@ -16,7 +16,16 @@
 
     </main>
     <aside class="l-aside">
-        <?php get_sidebar(); ?>
+        <?php if ( is_active_sidebar( 'sidebar02' ) ) : ?>
+            <?php dynamic_sidebar( 'sidebar02' ); ?>
+        <?php endif;?>
+
+        <h2 class="is-hide">関連情報</h2>
+        <?php if ( is_active_sidebar( 'sidebar01' ) ) : ?>
+            <div class="m-box">
+                <?php dynamic_sidebar( 'sidebar01' ); ?>
+            </div>
+        <?php endif;?>
     </aside>
 </div>
 <?php get_footer(); ?>

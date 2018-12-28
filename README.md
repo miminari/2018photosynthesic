@@ -55,4 +55,6 @@ html5boilerplateをベースにしています。
 * _helper.scss --- 今回は使いません。
 * _media.scss --- メディアクエリはここに。モバイルファーストの場合に使用。
 * _print.scss --- 印刷用。
+* modules/以下 --- 主要なモジュールをファイル分け。
 * style.scss --- メイン。
+* editor-style.scss --- エディター用のスタイル

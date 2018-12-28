@@ -24,7 +24,7 @@
 <div class="l-wrapper">
 <header class="l-global__header">
     <h1 class="m-logo"><a href="<?php echo home_url(); ?>" title="<?php bloginfo(); ?>"><span class="is-hide"><?php bloginfo(); ?></span><?php echo do_shortcode( '[svg]logo[/svg]' );?></a></h1>
-    <p class="m-description"><?php echo bloginfo('description'); ?></p>
+    <!-- p class="m-description"><?php echo bloginfo('description'); ?></p -->
 </header>
 <?php if ( has_nav_menu( 'header-menu' ) ) : ?>
 <nav class="l-global__nav">

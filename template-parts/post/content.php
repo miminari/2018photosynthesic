@@ -28,6 +28,24 @@
 				echo '<div class="m-alert"><p>この記事は3年以上前のものです。</p></div>';
 			}
 		}
+		/*
+		$content_arr = get_extended (get_the_content() );
+		if($content_arr['extended']) {
+			//moreタグ前
+			echo $content_arr['main'];
+			//広告
+			get_template_part( 'template-parts/post/adsence', get_post_format() );
+			//moreタグ後
+			echo $content_arr['extended'];
+		}else{
+			//広告
+			get_template_part( 'template-parts/post/adsence', get_post_format() );
+			//moreタグ後
+			echo $content_arr['main'];
+		}*/
+		//広告
+		//get_template_part( 'template-parts/post/adsence', get_post_format() );
+		//コンテンツ
 		the_content() ?>
 	</div>
 	<?php //ページ送り

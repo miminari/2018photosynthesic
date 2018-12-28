@@ -115,7 +115,6 @@
             height: auto;
         }
         figure {
-            margin: 0;
             max-width: 100vw;
             overflow: scroll;
         }
@@ -125,6 +124,22 @@
         iframe {
             max-width: 94vw;
             overflow: scroll;
+        }
+        .m-adsense {
+            //margin: 1em -3vw;
+            max-width: 100%;
+            overflow: hidden;
+            ins.adsbygoogle {
+                margin-left: 0 !important;
+            }
+            .m-ttl {
+                font-size: rem(10);
+                line-height: 1.2;
+                font-weight: normal;
+                color: $border-color;
+                margin-top: 1em;
+                margin-bottom: .5em;
+            }
         }
     }
 }
@@ -151,21 +166,36 @@
             font-size: rem(32);
         }
     }
-    max-width: rem(700);
+    max-width: rem($content-width);
     margin: auto;
 }
 .m-article__body {
     > * {
-        max-width: rem(700);
-        margin: 1em auto;
+        max-width: rem($content-width);
+        margin: rem(30) auto;
     }
     > h1,h2,h3,h4,h5,h6,table {
         margin-left: auto;
         margin-right: auto;
+        clear: both;
     }
     > figure {
-        max-width: rem(700);
+        max-width: rem($content-width);
         margin: auto;
+    }
+    > .m-adsense {
+        margin: 1em auto;
+        max-width: rem($content-width);
+        clear: both;
+    }
+    > .alignwide {
+        max-width: rem($content-width-wide);
+    }
+    > .alignfull {
+        max-width: 100vw;
+        width: 100vw;
+        margin-left: -3vw;
+        margin-right: -3vw;
     }
 }
 

@@ -52,6 +52,7 @@ add_theme_support( 'editor-color-palette', array(
       'color' => '#988768',
   )
 ) );
+add_theme_support( 'align-wide' );
 
 
 // ================================ widgetsの設定
@@ -177,6 +178,22 @@ function svg_func( $atts, $content = "" )  {
     return '<span class="m-svg--'.$content.'"><svg><use xlink:href="#'.$content.'"></use></svg></span>';
 }
 add_shortcode( 'svg', 'svg_func' );
+
+function add_adsense( $atts )  {
+  return '<div class="m-adsense"><h2 class="m-ttl">スポンサーリンク</h2>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="ca-pub-4751938491786550"
+       data-ad-slot="6452013503"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  </div>';
+}
+add_shortcode( 'ad', 'add_adsense' );
 
 /*********************
 OGPタグ/Twitterカード設定を出力
