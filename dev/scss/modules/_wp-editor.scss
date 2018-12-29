@@ -181,6 +181,9 @@ $column-margin : 0;
 $column-padding : 1em;
 .wp-block-column {
     flex-grow: 1;
+    p:first-child {
+        margin-top: 0;
+    }
 }
 .wp-block-columns {
     &.has-3-columns,
@@ -230,6 +233,7 @@ figure.wp-block-audio {
         margin-right: -3vw;
     }
 }
+/* == alignfull == */
 .alignfull {
     max-width: 100vw;
     width: 100vw;
@@ -240,15 +244,9 @@ figure.wp-block-audio {
     }
     &.wp-block-columns {
         .wp-block-column {
-            &:first-child {
-                p {
-                    margin-left: 3vw;
-                }
-            }
-            &:last-child {
-                p {
-                    margin-right: 3vw;
-                }
+            p {
+                margin-left: 3vw;
+                margin-right: 3vw;
             }
         }
     }
@@ -342,6 +340,27 @@ figure.wp-block-audio {
         &.alignright {
             max-width: 50%;
             margin-top: 0;
+        }
+    }
+    /* == alignfull == */
+    .alignfull {
+        &.wp-block-columns {
+            &.has-2-columns,
+            &.has-3-columns,
+            &.has-4-columns {
+                .wp-block-column {
+                    &:first-child {
+                        p {
+                            margin-right: 0;
+                        }
+                    }
+                    &:last-child {
+                        p {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }
