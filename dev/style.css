@@ -661,6 +661,7 @@ figure {
 .m-article__body iframe {
     max-width: 94vw;
     overflow: scroll;
+    display: flex;
 }
 
 .m-article__body .m-adsense {
