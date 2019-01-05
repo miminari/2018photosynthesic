@@ -8,8 +8,10 @@ Author URI: http://blog.photosynthesic.jp/
 */
 
 @import "config";
+@import "function";
 
 body {
     font-family: $base-font-family;
 }
 
+@import "modules/wp-editor";

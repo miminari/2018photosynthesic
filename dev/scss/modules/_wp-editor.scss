@@ -64,6 +64,12 @@ p.has-background {
             }
         }
     }
+    &.is-style-small {
+        .wp-block-button__link {
+            font-size: rem(16);
+            padding: .3em .8em;
+        }        
+    }
     &.is-style-outline {
         .wp-block-button__link {
             border-color: $link-color;

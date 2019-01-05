@@ -195,9 +195,7 @@ function add_adsense( $atts )  {
 }
 add_shortcode( 'ad', 'add_adsense' );
 
-/*********************
-OGPタグ/Twitterカード設定を出力
-*********************/
+// ================================  OGPタグ/Twitterカード
 function my_meta_ogp() {
   if( is_front_page() || is_home() || is_singular() ){
     global $post;
@@ -252,5 +250,15 @@ function my_meta_ogp() {
 } //END my_meta_ogp
 
 add_action('wp_head','my_meta_ogp');//headにOGPを出力
+
+// ================================   wp blocks customize
+function myguten_enqueue() {
+  wp_enqueue_script(
+      'myguten-script',
+      get_template_directory_uri() . '/wp_blocks_customed.js',
+      array( 'wp-blocks')
+  );
+}
+add_action( 'enqueue_block_editor_assets', 'myguten_enqueue' );
 
 ?>

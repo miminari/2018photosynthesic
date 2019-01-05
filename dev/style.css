@@ -1347,6 +1347,11 @@ p.has-background {
     background-color: #4d4d4d;
 }
 
+.wp-block-button.is-style-small .wp-block-button__link {
+    font-size: 1rem;
+    padding: .3em .8em;
+}
+
 .wp-block-button.is-style-outline .wp-block-button__link {
     border-color: #333;
 }
