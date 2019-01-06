@@ -12,6 +12,7 @@ $theme-colors: (
             background-color: $color;
             &:hover {
                 background-color: lighten( $color, 10% );
+                box-shadow: 0 0 0 rem(2) $color;
             }
         }
         &.has-#{$key}-color {
@@ -47,12 +48,28 @@ p.has-background {
     .wp-block-button__link {
         border-radius: rem(6);
         font-weight: 700;
-        font-size: inherit;
+        font-size: rem(16);
         line-height: auto;
         padding: .5em 1em;
+        position: relative;
+        transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+        overflow: hidden;
         &:hover {
             text-decoration: none;
-            box-shadow: none;
+            box-shadow: 0 0 0 rem(2) $link-color;
+            &:after {
+                content:'';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 0;
+                top: 0;
+                left: 0;
+                background-color: rgba($base-color,0.1);
+                border-radius: rem(6);
+                transform: rotate(0.495turn);
+                animation: lighting 200ms;
+            }
         }
         @include eachBtnColor($theme-colors);
     }
@@ -60,15 +77,16 @@ p.has-background {
         .wp-block-button__link {
             background-color: $link-color;
             &:hover {
-                background-color: lighten( $link-color, 10% );
+                background-color: lighten( $link-color, 20% );
             }
         }
     }
     &.is-style-small {
         .wp-block-button__link {
-            font-size: rem(16);
+            font-size: rem(14);
             padding: .3em .8em;
-        }        
+            font-weight: 400;
+        } 
     }
     &.is-style-outline {
         .wp-block-button__link {
@@ -76,6 +94,7 @@ p.has-background {
             &:hover {
                 border-color: darken( $link-color, 10% );
                 background-color: lighten( $base-color, 5% );
+                box-shadow: none;
             }
             @include eachBtnColor($theme-colors);
             @each $key, $color in $theme-colors {
@@ -97,6 +116,17 @@ p.has-background {
             }
             @include eachBtnColor($theme-colors);
         }
+    }
+}
+@keyframes lighting {
+    0%,10% {
+        height: 1%;
+    }
+    50% {
+        height: 80%;
+    }
+    90%,100% {
+        height: 0%;
     }
 }
 /* == separator / hr == */
