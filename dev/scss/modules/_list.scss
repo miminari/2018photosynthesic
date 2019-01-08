@@ -49,4 +49,47 @@
             }
         }
     }
+    &--relative {
+        @extend .m-list;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    &--relative > &__item {
+        list-style: none;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+        .m-media {
+            img {
+                max-width: 100%;
+                height: rem(174);
+                object-fit: cover;
+                box-shadow: 0 0 0 rem(1) $border-color;
+                &:hover {
+                    filter: brightness(120%);
+                }
+            }
+            &--none {
+                height: rem(174);
+                font-family: $serif-font-family;
+                box-shadow: 0 0 0 rem(1) $border-color;
+            }
+        }
+        .m-ttl {
+            font-size: rem(18);
+            margin-top: .2em;
+        }
+        .m-date {
+            font-size: rem(12);
+        }
+    }
+}
+/* ======= TABLET, DESKTOP ======= */
+@media only screen and (min-width: 40.063em) {
+    .m-list {
+        &--relative > &__item {
+            flex: 0 0 25%;
+            padding-right: 3vw;
+        }
+    }
 }

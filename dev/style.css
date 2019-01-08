@@ -898,7 +898,7 @@ figure {
 }
 
 /* == list == */
-.m-list, .m-list--sns {
+.m-list, .m-list--sns, .m-list--relative {
     margin-left: 0;
     padding-left: 0;
 }
@@ -951,6 +951,52 @@ figure {
 
 .m-list--sns .m-list__link:hover .m-svg--facebook svg {
     fill: #3b5998;
+}
+
+.m-list--relative {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.m-list--relative > .m-list__item {
+    list-style: none;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.m-list--relative > .m-list__item .m-media img {
+    max-width: 100%;
+    height: 10.875rem;
+    object-fit: cover;
+    box-shadow: 0 0 0 0.0625rem #707070;
+}
+
+.m-list--relative > .m-list__item .m-media img:hover {
+    filter: brightness(120%);
+}
+
+.m-list--relative > .m-list__item .m-media--none {
+    height: 10.875rem;
+    font-family: "EB Garamond", "Noto Serif JP", serif;
+    box-shadow: 0 0 0 0.0625rem #707070;
+}
+
+.m-list--relative > .m-list__item .m-ttl, .m-list--relative > .m-list__item .m-ttl--archive {
+    font-size: 1.125rem;
+    margin-top: .2em;
+}
+
+.m-list--relative > .m-list__item .m-date {
+    font-size: 0.75rem;
+}
+
+/* ======= TABLET, DESKTOP ======= */
+@media only screen and (min-width: 40.063em) {
+    .m-list--relative > .m-list__item {
+        flex: 0 0 25%;
+        padding-right: 3vw;
+    }
 }
 
 /* == loading == */
@@ -1869,6 +1915,14 @@ figure.wp-block-audio {
 
 .m-media a {
     box-shadow: none;
+}
+
+.m-media--none {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 /* == tag == */
