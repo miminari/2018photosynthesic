@@ -297,9 +297,13 @@ figure.wp-block-audio {
         max-width: 100%;
         margin-top: 0;
     }
-}
-.wp-block-cover-text {
-    font-family: $serif-font-family;
+    .wp-block-cover-text {
+        font-family: $serif-font-family;
+        margin: 0;
+        padding: .5em;
+        max-width: rem(600);
+        font-size: rem(24);
+    }
 }
 
 @media only screen and (min-width: 40.063em) {
