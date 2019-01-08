@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('m-article'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('m-article--exerpt'); ?>>
 	<header class="m-article__header">
 		<div class="m-musthead">
 			<div class="m-date"><?php the_date('Y-m-d'); ?></div>

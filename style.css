@@ -509,11 +509,11 @@ figure {
    Module rule ( .m- )
    -------------------- */
 /* == article == */
-.m-article {
+.m-article, .m-article--exerpt {
     margin-bottom: 1.875rem;
 }
 
-.m-article a {
+.m-article a, .m-article--exerpt a {
     word-break: break-all;
 }
 
@@ -530,7 +530,7 @@ figure {
     margin: 0;
 }
 
-.m-article__header h1.m-ttl {
+.m-article__header h1.m-ttl, .m-article__header h1.m-ttl--archive {
     font-size: 1.5rem;
 }
 
@@ -669,13 +669,33 @@ figure {
     margin-left: 0 !important;
 }
 
-.m-article__body .m-adsense .m-ttl {
+.m-article__body .m-adsense .m-ttl, .m-article__body .m-adsense .m-ttl--archive {
     font-size: 0.625rem;
     line-height: 1.2;
     font-weight: normal;
     color: #707070;
     margin-top: 1em;
     margin-bottom: .5em;
+}
+
+.m-article--exerpt .m-musthead {
+    padding: 0;
+}
+
+.m-article--exerpt .m-article__header {
+    padding-bottom: 0;
+}
+
+.m-article--exerpt .m-article__header .m-ttl, .m-article--exerpt .m-article__header .m-ttl--archive {
+    margin-top: .5em;
+}
+
+.m-article--exerpt .m-article__body {
+    font-size: 1rem;
+}
+
+.m-article--exerpt .m-article__body p:first-child {
+    margin-top: .5em;
 }
 
 /* ======= TABLET, DESKTOP ======= */
@@ -698,7 +718,7 @@ figure {
         max-width: 43.75rem;
         margin: auto;
     }
-    .m-article__header h1.m-ttl {
+    .m-article__header h1.m-ttl, .m-article__header h1.m-ttl--archive {
         font-size: 2rem;
     }
     .m-article__body > * {
@@ -743,7 +763,7 @@ figure {
     padding-top: 1em;
 }
 
-.m-author .m-ttl {
+.m-author .m-ttl, .m-author .m-ttl--archive {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
@@ -1866,9 +1886,15 @@ figure.wp-block-audio {
 }
 
 /* == ttl == */
-.m-ttl {
+.m-ttl, .m-ttl--archive {
     font-size: 1.25rem;
     font-family: "EB Garamond", "Noto Serif JP", serif;
+}
+
+.m-ttl--archive {
+    font-size: 1.5rem;
+    margin: 1.5em auto;
+    max-width: 64rem;
 }
 
 /* == copyright == */

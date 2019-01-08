@@ -143,6 +143,25 @@
             }
         }
     }
+    // .m-article--exerpt
+    &--exerpt {
+        @extend .m-article;
+        .m-musthead {
+            padding:0;
+        }
+    }
+    &--exerpt &__header {
+        padding-bottom: 0;
+        .m-ttl {
+            margin-top: .5em;
+        }
+    }
+    &--exerpt &__body {
+        font-size: rem(16);
+        p:first-child {
+            margin-top: .5em;
+        }
+    }
 }
 /* ======= TABLET, DESKTOP ======= */
 @media only screen and (min-width: 40.063em) {

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="l-contanier">
     <main class="l-main">
-        <h1 class="m-ttl"><?php the_archive_title() ?></h1>
+        <h1 class="m-ttl--archive"><?php the_archive_title() ?></h1>
     	<?php
     	if ( have_posts() ) :
 

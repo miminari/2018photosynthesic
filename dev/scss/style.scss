@@ -46,6 +46,12 @@ Author URI: http://blog.photosynthesic.jp/
 .m-ttl {
     font-size: rem(20);
     font-family: $serif-font-family;
+    &--archive {
+        @extend .m-ttl;
+        font-size: rem(24);
+        margin: 1.5em auto;
+        max-width: rem(1024);
+    }
 }
 
 /* == copyright == */
