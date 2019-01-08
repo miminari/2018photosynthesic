@@ -997,6 +997,9 @@ figure {
         flex: 0 0 25%;
         padding-right: 3vw;
     }
+    .m-list--relative > .m-list__item:last-child {
+        padding-right: 0;
+    }
 }
 
 /* == loading == */
