@@ -1,0 +1,21 @@
+
+
+# ==================== Emojis ====================
+# ✨  :sparkles: 新機能（New Feature）
+# 🐛  :bug: バグ修正（Bagfix）
+# 🔧  :wrench: バグではない修正 (Update)
+# 💼  :breafcase: 開発ツール（Tools）
+# 🎨  :art: デザインUI/UX(Accessibility)
+# 🐎  :horse: パフォーマンス（Performance）
+# 🗑️  :wastebasket: 削除（Removal）
+# 🚧  :construction: WIP(Work In Progress)
+
+# fix：バグ修正
+# add：新規（ファイル）機能追加
+# update：機能修正（バグではない）
+# remove：削除（ファイル）
+
+# ==================== Format ====================
+# :emoji: Subject
+#
+# Commit body...
