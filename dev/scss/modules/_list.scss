@@ -86,13 +86,14 @@
 }
 /* ======= TABLET, DESKTOP ======= */
 @media only screen and (min-width: 40.063em) {
+    /*! autoprefixer grid: off */
     .m-list {
-        &--relative > &__item {
-            flex: 0 0 25%;
-            padding-right: 3vw;
-            &:last-child {
-                padding-right: 0;
-            }
+        &--relative {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(21vw, 1fr));
+            grid-column-gap: 3vw;
+            grid-row-gap: 3vw;
+
         }
     }
 }

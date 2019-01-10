@@ -755,7 +755,7 @@ figure {
 }
 
 /* == author == */
-/* autoprefixer grid: on */
+/*! autoprefixer grid: on */
 .m-author {
     border-top: 0.125rem solid #707070;
     margin: 3.75rem auto;
@@ -993,12 +993,12 @@ figure {
 
 /* ======= TABLET, DESKTOP ======= */
 @media only screen and (min-width: 40.063em) {
-    .m-list--relative > .m-list__item {
-        flex: 0 0 25%;
-        padding-right: 3vw;
-    }
-    .m-list--relative > .m-list__item:last-child {
-        padding-right: 0;
+    /*! autoprefixer grid: off */
+    .m-list--relative {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(21vw, 1fr));
+        grid-column-gap: 3vw;
+        grid-row-gap: 3vw;
     }
 }
 
@@ -2363,6 +2363,9 @@ body:not(.home) .l-global__header .m-svg--logo svg {
     }
 }
 */
+    .l-bottom__nav {
+        padding: 0;
+    }
     /* --------------------
    Animation
    -------------------- */
