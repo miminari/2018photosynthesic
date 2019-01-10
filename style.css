@@ -1982,6 +1982,14 @@ figure.wp-block-audio {
     height: 100%;
 }
 
+/* == update == */
+p.m-update {
+    padding: .5em 1em;
+    font-size: 0.875rem;
+    margin: .2em auto;
+    background: rgba(0, 0, 0, 0.05);
+}
+
 /* == tag == */
 .m-tag {
     display: inline-block;

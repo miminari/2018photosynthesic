@@ -85,6 +85,14 @@ Author URI: http://blog.photosynthesic.jp/
     }
 }
 
+/* == update == */
+p.m-update {
+    padding: .5em 1em;
+    font-size: rem(14);
+    margin: .2em auto;
+    background: rgba($text-color,0.05);
+}
+
 /* == tag == */
 .m-tag {
     display: inline-block;
