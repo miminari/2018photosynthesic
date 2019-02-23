@@ -34,8 +34,6 @@
             </div>
         </article>
     </div>
-        <!-- 一覧ページへのリンク -->
-        <!-- div class="m-btn"><a href="#" class="m-btn__link">記事一覧</a></div -->
 </main>
 <aside class="l-aside">
 
