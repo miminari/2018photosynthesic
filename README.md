@@ -5,6 +5,7 @@
 
 ## テーマとしての使い方
 ダウンロードしたファイルをWordPressのthemesディレクトリに入れたらそのまま使えます。
+が、汎用性をあんまり考えていないのであしからず。
 
 ## Install
 dev/ で
@@ -90,3 +91,7 @@ html5boilerplateをベースにしています。
 * _print.scss --- 印刷用。
 * style.scss --- メイン。小さいモジュールやレイアウト、ステータス、アニメーションはここ。
 * editor-style.scss --- エディター用のスタイル
+
+## Licence
+2018photosynthesic WordPress Theme, Copyright 2018 Photosynthesic
+2018photosynthesic is distributed under the terms of the GNU GPL.

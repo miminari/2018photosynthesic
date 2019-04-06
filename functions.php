@@ -1,6 +1,5 @@
 <?php
 /*
-npm-script for wordpress
 Theme Name: 2018 Photosynthesic
 Version: 0.3
 */
