@@ -17,7 +17,7 @@ const vm = new Vue({ // eslint-disable-line
         posts: []
     },
     created () {
-        axios.get('/wp-json/wp/v2/posts?_embed&per_page=3')// eslint-disable-line
+        axios.get('/wp-content/uploads/wp-sls-api/db.json')// eslint-disable-line
             .then(response => {
                 this.isLoading = false;
                 this.isLoaded = true;
