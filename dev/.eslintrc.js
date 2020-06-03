@@ -3,8 +3,7 @@ module.exports = {
         "browser": true,
         "commonjs": true
     },
-//    "extends": "eslint:recommended",
-    "extends": ['eslint:recommended', 'vue', 'plugin:vue/recommended'],
+    "extends": "plugin:vue/base",
     "parserOptions": {
         "ecmaVersion": 2017
     },
